@@ -149,6 +149,9 @@
   <ItemGroup>
     <ClCompile Include="JERI.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="userData.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
