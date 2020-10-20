@@ -5,36 +5,39 @@ using namespace std;
 
 string getUsername()
 {
-    fstream userData;
-    string username;
-    userData.open("userData.txt");
+	fstream userData;
+	string username;
+	userData.open("userData.txt");
 
-    getline(userData, username, '~');
+	getline(userData, username, '~');
 
-    userData.close();
+	userData.close();
 
-    return username;
+	return username;
 }
 
 int getLevel()
 {
-    fstream userData;
-    string level[2];
-    userData.open("userData.txt");
-    
-    // Need to be fixed
-    getline(userData, level[0], '~');
-    getline(userData, level[1], '~');
+	fstream userData;
+	string level[2];
+	userData.open("userData.txt");
 
-    userData.close();
+	// Need to be fixed
+	getline(userData, level[0], '~');
+	getline(userData, level[1], '~');
 
-    return atoi(level[1].c_str());
+	userData.close();
+
+	return atoi(level[1].c_str());
 }
 
-
+bool checkUserData(const string username, const int level)
+{
+	return (username != "-1" && level != -1);
+}
 
 int main()
 {
-    const string USERNAME = getUsername();
-    const int LEVEL = getLevel();
+	const string USERNAME = getUsername();
+	const int LEVEL = getLevel();
 }
