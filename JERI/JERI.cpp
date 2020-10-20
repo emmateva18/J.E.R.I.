@@ -1,6 +1,8 @@
 #include <iostream>
+#include <vector>
 #include <fstream>
 #include <string>
+#include "struct.h"
 using namespace std;
 
 string getUsername()
@@ -36,8 +38,11 @@ bool checkUserData(const string username, const int level)
 	return (username != "-1" && level != -1);
 }
 
+
 int main()
 {
 	const string USERNAME = getUsername();
 	const int LEVEL = getLevel();
+	vector <QESTION> QUESTIONS;
+
 }
