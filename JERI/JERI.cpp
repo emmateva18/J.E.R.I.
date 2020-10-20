@@ -38,11 +38,59 @@ bool checkUserData(const string username, const int level)
 	return (username != "-1" && level != -1);
 }
 
+void goToLevel(const int level)
+{
+	switch (level)
+	{
+		case 1:
+		{
+			//Go to function for level 1
+		}
+		case 2:
+		{
+			//Go to function for level 2
+		}
+		case 3:
+		{
+			//Go to function for level 3
+		}
+		case 4:
+		{
+			//Go to function for level 4
+		}
+	}
+}
+
+void greetings(string& username, int& level, bool isDataValid)
+{
+	if (!isDataValid)
+	{
+		cout << "Hello blalalalal\n";
+		cout << "Name: ";
+		cin >> username;
+	}
+	else
+	{
+		cout << "Hi" << username << "blalalaa";
+		goToLevel(level);
+	}
+}
+
 
 int main()
 {
-	const string USERNAME = getUsername();
-	const int LEVEL = getLevel();
+	string previousUsername = getUsername();
+	int previousLevel = getLevel();
 	vector <QESTION> QUESTIONS;
+	string username;
+	int level;
 
+	if (!checkUserData(previousUsername, previousLevel))
+	{
+		greetings(username, level, 0);
+	}
+	else
+	{
+		greetings(previousUsername, previousLevel, 1);
+	}
 }
