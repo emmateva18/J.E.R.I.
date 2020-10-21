@@ -61,13 +61,14 @@ void goToLevel(const int level)
 	}
 }
 
-void greetings(string& username, int& level, bool isDataValid)
+void greetings(string& username, int& level)
 {
-	if (!isDataValid)
+	if (!checkUserData(username, level))
 	{
 		cout << "Hello blalalalal\n";
 		cout << "Name: ";
 		cin >> username;
+		goToLevel(1);
 	}
 	else
 	{
@@ -79,18 +80,9 @@ void greetings(string& username, int& level, bool isDataValid)
 
 int main()
 {
-	string previousUsername = getUsername();
-	int previousLevel = getLevel();
-	vector <QESTION> QUESTIONS;
-	string username;
-	int level;
+	string username = getUsername();
+	int level = getLevel();
 
-	if (!checkUserData(previousUsername, previousLevel))
-	{
-		greetings(username, level, 0);
-	}
-	else
-	{
-		greetings(previousUsername, previousLevel, 1);
-	}
+	greetings(username, level);
+
 }
