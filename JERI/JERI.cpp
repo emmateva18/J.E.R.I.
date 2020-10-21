@@ -6,6 +6,15 @@
 #include "Quiz.h"
 using namespace std;
 
+void isNumberTooBig(int number)
+{
+	if (!(cin >> number))
+	{
+		cin.clear();
+		cin.ignore(INT_MAX, '\n');
+	}
+}
+
 string getUsername()
 {
 	fstream userData;
@@ -94,7 +103,7 @@ int main()
 
 	Quiz test;
 	std::vector<QESTION> a = test.addQuestions();
-	test.QuizMenu(1);
+	test.QuizMenu(2);
 
 	string username = getUsername();
 	int level = getLevel();

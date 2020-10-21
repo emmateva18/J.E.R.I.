@@ -2,6 +2,7 @@
 #include <vector>
 #include <iostream>
 #include "struct.h"
+
 using namespace std;
 
 vector<QESTION> Quiz::addQuestions()
@@ -57,6 +58,7 @@ void Quiz::QuizMenu(int level)
 	int userAnswer;
 	int correctAnswersCount = 0;
 	const int answerCount = 4;
+	bool correct;
 
 	for (size_t i = 0; i < QUESTIONS.size(); i++)
 	{
@@ -67,8 +69,27 @@ void Quiz::QuizMenu(int level)
 			{
 				cout << QUESTIONS[i].distract[j] << endl;
 			}
-			cout << "Your answer: ";
-			cin >> userAnswer;
+
+			do 
+			{
+				cout << "Your answer: ";
+
+				if (!(cin >> userAnswer))
+				{
+					cin.clear();
+					cin.ignore(INT_MAX, '\n');
+				}
+
+				if (isInputValid(userAnswer))
+				{
+					correct = true;
+				}
+				else
+				{
+					cout << "Invalid input! Number must be between 1 and 4" << endl;;
+					correct = false;
+				}
+			} while (!correct);
 
 			if (checkAnswer(QUESTIONS[i].id,userAnswer))
 			{
@@ -100,4 +121,9 @@ void Quiz::showResults(int correctAnswersCount, int answersCount)
 	float percentage = ((float)correctAnswersCount / (float)answersCount) * 100;
 	cout << "Result " << correctAnswersCount << " / " << answersCount << endl;
 	cout << percentage <<"%";
+}
+
+bool Quiz::isInputValid(int num)
+{
+	return (num <= 4);
 }
