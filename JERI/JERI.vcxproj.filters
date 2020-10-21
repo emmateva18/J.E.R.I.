@@ -18,6 +18,9 @@
     <ClCompile Include="JERI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Quiz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="userData.txt">
@@ -26,6 +29,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Quiz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

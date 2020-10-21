@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include "struct.h"
+#include "Quiz.h"
 using namespace std;
 
 string getUsername()
@@ -80,6 +81,11 @@ void greetings(string& username, int& level)
 
 int main()
 {
+
+	Quiz test;
+	std::vector<QESTION> a = test.addQuestions();
+
+
 	string username = getUsername();
 	int level = getLevel();
 

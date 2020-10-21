@@ -148,11 +148,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="JERI.cpp" />
+    <ClCompile Include="Quiz.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="userData.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Quiz.h" />
     <ClInclude Include="struct.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
