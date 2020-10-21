@@ -7,4 +7,5 @@ struct QESTION
 	std::string stem;
 	std::string distract[4];
 	int correctAnswer = -1;
+	int level = 0;
 };

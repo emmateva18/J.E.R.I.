@@ -12,7 +12,9 @@ private:
 public:
 
 	std::vector<QESTION> addQuestions();
-
+	void QuizMenu(int level);
+	bool checkAnswer(int id, int userAnswer);
+	void showResults(int correctAnswersCount, int answersCount);
 
 };
 
