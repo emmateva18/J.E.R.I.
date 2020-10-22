@@ -13,7 +13,10 @@ string getUsername()
 	string username;
 	userData.open("userData.txt");
 
-	getline(userData, username, '~');
+	if (userData.is_open())
+	{
+		getline(userData, username, '~');
+	}
 
 	userData.close();
 
@@ -27,8 +30,12 @@ int getLevel()
 	userData.open("userData.txt");
 
 	// Need to be fixed
-	getline(userData, level[0], '~');
-	getline(userData, level[1], '~');
+	if (userData.is_open())
+	{
+		getline(userData, level[0], '~');
+		getline(userData, level[1], '~');
+	}
+
 
 	userData.close();
 
@@ -56,8 +63,10 @@ void saveUserData(string username, int level)
 
 	if (data.is_open())
 	{
-		data >> username >> "~" >> level;
+		data << username << "~" << level << "~";
 	}
+
+	data.close();
 }
 
 void finalLevel()
@@ -102,25 +111,25 @@ void levels(int level, string username)
 
 }
 
-void goToLevel(const int level)
+void goToLevel(const int level, const string username)
 {
 	switch (level)
 	{
 		case 1:
 		{
-			levels(1);
+			levels(1, username);
 		}
 		case 2:
 		{
-			levels(2);
+			levels(2, username);
 		}
 		case 3:
 		{
-			levels(3);
+			levels(3, username);
 		}
 		case 4:
 		{
-			levels(4);
+			levels(4, username);
 		}
 	}
 }
@@ -132,12 +141,12 @@ void greetings(string& username, int& level)
 		cout << "Hello blalalalal\n";
 		cout << "Name: ";
 		cin >> username;
-		goToLevel(1);
+		goToLevel(1, username);
 	}
 	else
 	{
 		cout << "Hi" << username << "blalalaa";
-		goToLevel(level);
+		goToLevel(level, username);
 	}
 }
 

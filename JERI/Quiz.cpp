@@ -40,7 +40,7 @@ void Quiz::addQuestions()
 		}
 	);
 
-	// Question 1
+	// Question 3
 	QUESTIONS.push_back(
 		{ 1,
 		"Qestion3",
@@ -51,6 +51,20 @@ void Quiz::addQuestions()
 		},
 		2,
 		1
+		}
+	);
+
+	// Question 4
+	QUESTIONS.push_back(
+		{ 1,
+		"Qestion4",
+		{"a4",
+		 "b4",
+		 "c4",
+		 "d4"
+		},
+		2,
+		3
 		}
 	);
 
