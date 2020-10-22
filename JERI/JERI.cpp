@@ -6,14 +6,6 @@
 #include "Quiz.h"
 using namespace std;
 
-void isNumberTooBig(int number)
-{
-	if (!(cin >> number))
-	{
-		cin.clear();
-		cin.ignore(INT_MAX, '\n');
-	}
-}
 
 string getUsername()
 {
@@ -48,13 +40,39 @@ bool checkUserData(const string username, const int level)
 	return (username != "-1" && level != -1);
 }
 
-void level01()
+
+void finalLevel()
+{
+
+}
+
+void levels(int level)
 {
 	Quiz quiz;
 
-	cout << "Blalalallal, set blaaaaaa, vajno,blaaaaaaaa";
+	switch (level)
+	{
+		case 1:
+			cout << "Blalalallal, set blaaaaaa, vajno,blaaaaaaaa" << endl;
+			quiz.QuizMenu(1);
+			break;
 
-	quiz.QuizMenu(1);
+		case 2:
+			cout << "jdfhkudsfhkjuioDNIUSHKLFSDHUIL";
+			quiz.QuizMenu(2);
+			break;
+
+		case 3:
+			cout << "jvjkfvjfkfvjkkj.rhjgrlh.jhfhgrlrgkhawrjvdk";
+			quiz.QuizMenu(3);
+			break;
+
+		case 4:
+			cout << "finitoooooooo";
+			finalLevel();
+			break;
+	}
+
 
 }
 
@@ -64,19 +82,23 @@ void goToLevel(const int level)
 	{
 		case 1:
 		{
-			level01();
+			levels(1);
+			break;
 		}
 		case 2:
 		{
-			//Go to function for level 2
+			levels(2);
+			break;
 		}
 		case 3:
 		{
-			//Go to function for level 3
+			levels(3);
+			break;
 		}
 		case 4:
 		{
-			//Go to function for level 4
+			levels(4);
+			break;
 		}
 	}
 }
@@ -100,14 +122,9 @@ void greetings(string& username, int& level)
 
 int main()
 {
-
-	Quiz test;
-	std::vector<QESTION> a = test.addQuestions();
-	test.QuizMenu(2);
-
 	string username = getUsername();
 	int level = getLevel();
 
-	//greetings(username, level);
+	greetings(username, level);
 
 }

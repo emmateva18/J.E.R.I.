@@ -5,7 +5,12 @@
 
 using namespace std;
 
-vector<QESTION> Quiz::addQuestions()
+Quiz::Quiz()
+{
+	Quiz::addQuestions();
+}
+
+void Quiz::addQuestions()
 {
 	// Question 1
 	QUESTIONS.push_back(
@@ -49,8 +54,6 @@ vector<QESTION> Quiz::addQuestions()
 		}
 	);
 
-
-	return QUESTIONS;
 }
 
 void Quiz::QuizMenu(int level)
@@ -70,7 +73,7 @@ void Quiz::QuizMenu(int level)
 				cout << QUESTIONS[i].distract[j] << endl;
 			}
 
-			do 
+			do
 			{
 				cout << "Your answer: ";
 
@@ -91,7 +94,7 @@ void Quiz::QuizMenu(int level)
 				}
 			} while (!correct);
 
-			if (checkAnswer(QUESTIONS[i].id,userAnswer))
+			if (checkAnswer(QUESTIONS[i].id, userAnswer))
 			{
 				correctAnswersCount++;
 			}
@@ -112,7 +115,7 @@ bool Quiz::checkAnswer(int id, int userAnswer)
 			return true;
 		}
 	}
-	
+
 	return false;
 }
 
@@ -120,7 +123,7 @@ void Quiz::showResults(int correctAnswersCount, int answersCount)
 {
 	float percentage = ((float)correctAnswersCount / (float)answersCount) * 100;
 	cout << "Result " << correctAnswersCount << " / " << answersCount << endl;
-	cout << percentage <<"%";
+	cout << percentage << "%";
 }
 
 bool Quiz::isInputValid(int num)
