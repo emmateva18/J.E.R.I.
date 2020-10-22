@@ -40,13 +40,32 @@ bool checkUserData(const string username, const int level)
 	return (username != "-1" && level != -1);
 }
 
+bool userDataValidation(int level)
+{
+	if (isdigit(level))
+	{
+		return true;
+	}
+	return false;
+}
+
+void saveUserData(string username, int level)
+{
+	fstream data;
+	data.open("userData.txt");
+
+	if (data.is_open())
+	{
+		data >> username >> "~" >> level;
+	}
+}
 
 void finalLevel()
 {
 
 }
 
-void levels(int level)
+void levels(int level, string username)
 {
 	Quiz quiz;
 
@@ -55,20 +74,27 @@ void levels(int level)
 		case 1:
 			cout << "Blalalallal, set blaaaaaa, vajno,blaaaaaaaa" << endl;
 			quiz.QuizMenu(1);
+			cout << "You completed blalalalal 1" << endl;
+			saveUserData(username, 1);
 			break;
 
 		case 2:
-			cout << "jdfhkudsfhkjuioDNIUSHKLFSDHUIL";
+			cout << "jdfhkudsfhkjuioDNIUSHKLFSDHUIL" << endl;
 			quiz.QuizMenu(2);
+			cout << "You completed blalalalal 2" << endl;
+			saveUserData(username, 2);
 			break;
 
 		case 3:
-			cout << "jvjkfvjfkfvjkkj.rhjgrlh.jhfhgrlrgkhawrjvdk";
+			cout << "jvjkfvjfkfvjkkj.rhjgrlh.jhfhgrlrgkhawrjvdk" << endl;
 			quiz.QuizMenu(3);
+			cout << "You completed blalalalal 3" << endl;
+			saveUserData(username, 3);
 			break;
 
 		case 4:
-			cout << "finitoooooooo";
+			cout << "finitoooooooo" << endl;
+			saveUserData(username, 4);
 			finalLevel();
 			break;
 	}
@@ -83,22 +109,18 @@ void goToLevel(const int level)
 		case 1:
 		{
 			levels(1);
-			break;
 		}
 		case 2:
 		{
 			levels(2);
-			break;
 		}
 		case 3:
 		{
 			levels(3);
-			break;
 		}
 		case 4:
 		{
 			levels(4);
-			break;
 		}
 	}
 }
@@ -124,6 +146,7 @@ int main()
 {
 	string username = getUsername();
 	int level = getLevel();
+
 
 	greetings(username, level);
 
