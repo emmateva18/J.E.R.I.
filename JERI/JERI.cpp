@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <vector>
 #include <fstream>
 #include <string>
@@ -121,8 +121,6 @@ void greetings(string& username, int& level)
 		levels(level, username);
 	}
 }
-
-
 
 int main()
 {
