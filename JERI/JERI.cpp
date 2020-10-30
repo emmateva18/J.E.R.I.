@@ -69,11 +69,6 @@ void saveUserData(string username, int level)
 	data.close();
 }
 
-void finalLevel()
-{
-
-}
-
 void levels(int level, string username)
 {
 	Quiz quiz;
@@ -81,57 +76,31 @@ void levels(int level, string username)
 	switch (level)
 	{
 		case 1:
-			cout << "Blalalallal, set blaaaaaa, vajno,blaaaaaaaa" << endl;
+			cout << "Set is something with numbers" << endl;
 			quiz.QuizMenu(1);
-			cout << "You completed blalalalal 1" << endl;
+			cout << "You completed level 1" << endl;
 			saveUserData(username, 1);
-			break;
 
 		case 2:
-			cout << "jdfhkudsfhkjuioDNIUSHKLFSDHUIL" << endl;
+			cout << "Operations with sets" << endl;
 			quiz.QuizMenu(2);
-			cout << "You completed blalalalal 2" << endl;
+			cout << "You completed level 2" << endl;
 			saveUserData(username, 2);
-			break;
 
 		case 3:
-			cout << "jvjkfvjfkfvjkkj.rhjgrlh.jhfhgrlrgkhawrjvdk" << endl;
+			cout << "Examples of sets" << endl;
 			quiz.QuizMenu(3);
-			cout << "You completed blalalalal 3" << endl;
+			cout << "You completed level 3" << endl;
 			saveUserData(username, 3);
-			break;
 
 		case 4:
-			cout << "finitoooooooo" << endl;
+			cout << "Final level" << endl;
 			saveUserData(username, 4);
-			finalLevel();
+			//finalLevelMenu();
 			break;
 	}
 
 
-}
-
-void goToLevel(const int level, const string username)
-{
-	switch (level)
-	{
-		case 1:
-		{
-			levels(1, username);
-		}
-		case 2:
-		{
-			levels(2, username);
-		}
-		case 3:
-		{
-			levels(3, username);
-		}
-		case 4:
-		{
-			levels(4, username);
-		}
-	}
 }
 
 void greetings(string& username, int& level)
@@ -141,14 +110,15 @@ void greetings(string& username, int& level)
 		cout << "Hello blalalalal\n";
 		cout << "Name: ";
 		cin >> username;
-		goToLevel(1, username);
+		levels(1, username);
 	}
 	else
 	{
-		cout << "Hi" << username << "blalalaa";
-		goToLevel(level, username);
+		cout << "Hi " << username << endl;
+		levels(level, username);
 	}
 }
+
 
 
 int main()

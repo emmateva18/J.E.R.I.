@@ -2,6 +2,7 @@
 #include <vector>
 #include <iostream>
 #include "struct.h"
+#include "dataValidation.h"
 
 using namespace std;
 
@@ -15,11 +16,11 @@ void Quiz::addQuestions()
 	// Question 1
 	QUESTIONS.push_back(
 		{ 1,		// ID
-		"Qestion",	// Stem
-		{"a",		// Distract 1
-		 "b",		// Distract 2
-		 "c",		// Distract 3
-		 "d"		// Distract 4
+		"What is set",	// Stem
+		{"1) Hot Dog",		// Distract 1
+		 "2) Jelezar",		// Distract 2
+		 "3) Something with numbers",		// Distract 3
+		 "4) Kondoriano Horhe"		// Distract 4
 		},
 		1,			// Correct Answer
 		1			// Level
@@ -29,11 +30,11 @@ void Quiz::addQuestions()
 	// Question 2
 	QUESTIONS.push_back(
 		{ 1,
-		"Qestion2",
-		{"a2",
-		 "b2",
-		 "c2",
-		 "d2"
+		"What is sechenie",
+		{"1) Krokodil",
+		 "2) Zebra",
+		 "3) Operation with sets",
+		 "4) Muha"
 		},
 		2,
 		2
@@ -43,28 +44,28 @@ void Quiz::addQuestions()
 	// Question 3
 	QUESTIONS.push_back(
 		{ 1,
-		"Qestion3",
-		{"a3",
-		 "b3",
-		 "c3",
-		 "d3"
+		"What picture is sechenie",
+		{"1) Kozo",
+		 "2) This",
+		 "3) Mirko",
+		 "4) Kravarka"
 		},
 		2,
-		1
+		3
 		}
 	);
 
 	// Question 4
 	QUESTIONS.push_back(
 		{ 1,
-		"Qestion4",
-		{"a4",
-		 "b4",
-		 "c4",
-		 "d4"
+		"What is subset",
+		{"1) Kuzu",
+		 "2) Me",
+		 "3) Gandau",
+		 "4) This"
 		},
 		2,
-		3
+		1
 		}
 	);
 
@@ -93,8 +94,7 @@ void Quiz::QuizMenu(int level)
 
 				if (!(cin >> userAnswer))
 				{
-					cin.clear();
-					cin.ignore(INT_MAX, '\n');
+					cinClearIgnore();
 				}
 
 				if (isInputValid(userAnswer))
@@ -103,7 +103,7 @@ void Quiz::QuizMenu(int level)
 				}
 				else
 				{
-					cout << "Invalid input! Number must be between 1 and 4" << endl;;
+					cout << "Invalid input! Number must be between 1 and 4" << endl;
 					correct = false;
 				}
 			} while (!correct);
@@ -137,10 +137,11 @@ void Quiz::showResults(int correctAnswersCount, int answersCount)
 {
 	float percentage = ((float)correctAnswersCount / (float)answersCount) * 100;
 	cout << "Result " << correctAnswersCount << " / " << answersCount << endl;
-	cout << percentage << "%";
+	cout << percentage << "%" << endl;
+	cout << endl;
 }
 
 bool Quiz::isInputValid(int num)
 {
-	return (num <= 4);
+	return (num >= 1 && num <= 4);
 }
