@@ -88,12 +88,15 @@ void finalLevelMenu()
 		switch (input)
 		{
 		case 1:
+			system("cls");
 			setsOperationsMenu();
 			break;
 		case 2:
+			system("cls");
 			optionsMenu();
 			break;
 		case 3:
+			system("cls");
 			cout << "Bye!" << endl;
 			exit(0);
 			break;
