@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include "struct.h"
+#include "setsOperationsPresentation.h"
 #include "Quiz.h"
 using namespace std;
 
@@ -96,7 +97,7 @@ void levels(int level, string username)
 		case 4:
 			cout << "Final level" << endl;
 			saveUserData(username, 4);
-			//finalLevelMenu();
+			finalLevelMenu();
 			break;
 	}
 
