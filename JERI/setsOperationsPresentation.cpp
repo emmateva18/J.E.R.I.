@@ -27,8 +27,11 @@ void finalLevelMenu()
 			isValid = true;
 		}
 	}
-		
 
-	
+	switch (input)
+	{
+	case 1:
+		break;
+	}
 
 }

@@ -104,6 +104,8 @@ void levels(int level, string username)
 
 }
 
+
+
 void greetings(string& username, int& level)
 {
 	if (!checkUserData(username, level))
