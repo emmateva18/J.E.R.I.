@@ -5,21 +5,33 @@
 
 
 
-MENU_FUNC_PTR menu2(std::vector<MENU_ITEM> menus);
+/*-----------DATA--------------------*/
 
-//void menu(std::string, std::string, std::string, int, int&, std::string option4, std::string option5);
+std::vector<int> unionOfNumSets();
 
-std::vector<int> unionOfSets();
+std::vector<char> unionOfCharSets();
 
-void numUnionMenu();
+/*---------PRESENTATION-------------*/
+
+MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus);
+
+void displayCharUnion();
+
+void displayNumUnion();
+
+void enterChars();
+
+void charUnionMenu();
 
 void enterNums();
 
-void displayUnion();
+void numUnionMenu();
 
 void setsUnionMenu();
 
 void setsOperationsMenu();
+
+void optionsMenu();
 
 void finalLevelMenu();
 
