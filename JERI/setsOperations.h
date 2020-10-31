@@ -3,9 +3,7 @@
 #include <vector>
 #include "struct.h"
 
-std::vector<int> numSet1, numSet2;
-std::vector<char> charSet1, charSet2;
-std::vector<std::string> stringSet1, stringSet2;
+
 
 MENU_FUNC_PTR menu2(std::vector<MENU_ITEM> menus);
 

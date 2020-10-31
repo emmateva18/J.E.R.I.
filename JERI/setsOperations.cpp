@@ -5,6 +5,10 @@
 #include <vector>
 using namespace std;
 
+vector<int> numSet1, numSet2;
+vector<char> charSet1, charSet2;
+vector<string> stringSet1, stringSet2;
+
 
 //vector<MENU_ITEM> menu1{
 //	{{ "Operations with sets" }, setsOperationsMenu},
@@ -73,24 +77,94 @@ MENU_FUNC_PTR menu2(std::vector<MENU_ITEM> menus)
 
 vector<int> unionOfSets()
 {
+	vector<int> unionS;
 
+	int temp, index = 0;
+	size_t count = 0;
+	for (size_t i = 0; i < numSet1.size(); i++)
+	{
+		for (size_t j = 0; j < numSet2.size() - count; j++)
+		{
+			if (numSet1[i] == numSet2[j])
+			{
+				temp = numSet2[j];
+				numSet2[j] = numSet2[numSet2.size() - 1 - count];
+				numSet2[numSet2.size() - 1 - count] = temp;
+				count++;
+			}
+		}
+		unionS.push_back(numSet1[i]);
+	}
+	for (int i = 0; i < numSet2.size() - count; i++)
+	{
+		unionS.push_back(numSet2[i]);
+	}
+
+	return unionS;
+
+
+	//vector<int> unionS;
+
+	//for (size_t i = 0; i < numSet1.size(); i++)
+	//{
+	//	for (size_t k = 0; k < numSet2.size(); k++)
+	//	{
+	//		if (numSet1[i] == numSet1[k])
+	//		{
+	//			unionS.push_back(numSet1[i]);
+	//		}
+	//	}
+	//}
+
+	//return unionS;
 }
 
 void enterNums()
 {
-	int elC;
+	int elC1, elC2, num;
 	cout << "How many elements set 1 will have: ";
-	cin >> elC;
-	cout << "Enter elements for set 1:" << endl;
-	for (int i = 0; i < elC; i++)
-	{
+	cin >> elC1;
 
+	cout << "Enter elements for set 1:" << endl;
+	for (int i = 0; i < elC1; i++)
+	{
+		cout << "Element " << i + 1 << ": ";
+		cin >> num;
+		numSet1.push_back(num);
+	}
+
+	cout << "How many elements set 2 will have: ";
+	cin >> elC2;
+
+	cout << "Enter elements for set 2:" << endl;
+	for (int i = 0; i < elC2; i++)
+	{
+		cout << "Element " << i + 1 << ": ";
+		cin >> num;
+		numSet2.push_back(num);
 	}
 }
 
 void displayUnion()
 {
 	vector<int> unionSets = unionOfSets();
+
+	cout << "Union" << endl;
+
+	if (unionSets.size() == 0)
+	{
+		cout << "No Union" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < unionSets.size(); i++)
+		{
+			cout << unionSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
 }
 
 
@@ -101,6 +175,7 @@ void numUnionMenu()
 	if (numSet1.size() == 0)
 	{
 		enterNums();
+		displayUnion();
 	}
 	else
 	{
@@ -110,7 +185,7 @@ void numUnionMenu()
 			cout << "Y/N: ";
 			cin >> yn;
 
-			if (yn != 'Y' || yn != 'N')
+			if (yn != 'Y' && yn != 'N')
 			{
 				cout << "Incorrects input!";
 			}
@@ -123,6 +198,8 @@ void numUnionMenu()
 				}
 				else
 				{
+					numSet1.clear();
+					numSet2.clear();
 					enterNums();
 					displayUnion();
 				}
@@ -138,8 +215,8 @@ void setsUnionMenu()
 {
 	cout << "Choose the type of the elements:" << endl;
 	MENU_FUNC_PTR fp = menu2({
-			{{ "Numbers" }, setsOperationsMenu},
-			{{ "Characters" }, optionsMenu},
+			{{ "Numbers" }, numUnionMenu},
+			{{ "Characters" }, NULL},
 			{{ "Words" }, NULL}
 		});
 
@@ -149,8 +226,8 @@ void setsUnionMenu()
 void setsOperationsMenu()
 {
 	MENU_FUNC_PTR fp = menu2({
-				{{ "Union of Sets" }, setsOperationsMenu},
-				{{ "Intersection of Sets" }, optionsMenu},
+				{{ "Union of Sets" }, numUnionMenu},
+				{{ "Intersection of Sets" }, NULL},
 				{{ "Difference of Sets" }, NULL},
 				{{ "Symmetric Difference" }, NULL}
 		});
