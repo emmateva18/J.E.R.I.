@@ -3,7 +3,7 @@
 #include <fstream>
 #include <string>
 #include "struct.h"
-#include "setsOperationsPresentation.h"
+#include "setsOperations.h"
 #include "Quiz.h"
 using namespace std;
 
@@ -124,7 +124,7 @@ void greetings(string& username, int& level)
 
 int main()
 {
-	
+
 
 
 	string username = getUsername();

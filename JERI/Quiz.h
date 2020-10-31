@@ -13,7 +13,7 @@ public:
 
 	void addQuestions();
 	Quiz();
-	void QuizMenu(int level);
+	void QuizMenu(int level); // glavo f
 	bool checkAnswer(int id, int userAnswer);
 	void showResults(int correctAnswersCount, int answersCount);
 	bool isInputValid(int num);

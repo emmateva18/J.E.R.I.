@@ -150,8 +150,7 @@
     <ClCompile Include="dataValidation.cpp" />
     <ClCompile Include="JERI.cpp" />
     <ClCompile Include="Quiz.cpp" />
-    <ClCompile Include="setsOperationsData.cpp" />
-    <ClCompile Include="setsOperationsPresentation.cpp" />
+    <ClCompile Include="setsOperations.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="userData.txt" />
@@ -159,8 +158,7 @@
   <ItemGroup>
     <ClInclude Include="dataValidation.h" />
     <ClInclude Include="Quiz.h" />
-    <ClInclude Include="setsOperationsData.h" />
-    <ClInclude Include="setsOperationsPresentation.h" />
+    <ClInclude Include="setsOperations.h" />
     <ClInclude Include="struct.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

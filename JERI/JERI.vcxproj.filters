@@ -21,13 +21,10 @@
     <ClCompile Include="Quiz.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="setsOperationsData.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="setsOperationsPresentation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="dataValidation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="setsOperations.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -43,13 +40,10 @@
     <ClInclude Include="Quiz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="setsOperationsData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="setsOperationsPresentation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="dataValidation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="setsOperations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

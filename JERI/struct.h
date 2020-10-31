@@ -9,3 +9,11 @@ struct QESTION
 	int correctAnswer = -1;
 	int level = 0;
 };
+
+typedef void(*MENU_FUNC_PTR)();
+
+struct MENU_ITEM
+{
+	std::string text;
+	MENU_FUNC_PTR funcPtr;
+};
