@@ -6,18 +6,25 @@
 
 
 /*-----------DATA--------------------*/
-
 std::vector<int> unionOfNumSets();
 
 std::vector<char> unionOfCharSets();
+
+std::vector<std::string> unionOfStringSets();
 
 /*---------PRESENTATION-------------*/
 
 MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus);
 
+void displayStringUnion();
+
 void displayCharUnion();
 
 void displayNumUnion();
+
+void enterStrings();
+
+void stringUnionMenu();
 
 void enterChars();
 

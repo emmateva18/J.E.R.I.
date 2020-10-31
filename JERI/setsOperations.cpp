@@ -82,7 +82,33 @@ vector<int> unionOfNumSets()
 	return unionS;
 }
 
+vector<string> unionOfStringSets()
+{
+	vector<string> unionS;
 
+	string temp;
+	size_t count = 0;
+	for (size_t i = 0; i < stringSet1.size(); i++)
+	{
+		for (size_t j = 0; j < stringSet2.size() - count; j++)
+		{
+			if (stringSet1[i] == stringSet2[j])
+			{
+				temp = stringSet2[j];
+				stringSet2[j] = stringSet2[stringSet2.size() - 1 - count];
+				stringSet2[stringSet2.size() - 1 - count] = temp;
+				count++;
+			}
+		}
+		unionS.push_back(stringSet1[i]);
+	}
+	for (int i = 0; i < stringSet2.size() - count; i++)
+	{
+		unionS.push_back(stringSet2[i]);
+	}
+
+	return unionS;
+}
 
 
 MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
@@ -156,6 +182,97 @@ void displayNumUnion()
 
 
 	cout << endl;
+}
+
+void displayStringUnion()
+{
+	vector<string> unionSets = unionOfStringSets();
+
+	cout << "Union" << endl;
+
+	if (unionSets.size() == 0)
+	{
+		cout << "No Union" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < unionSets.size(); i++)
+		{
+			cout << unionSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
+}
+
+void enterStrings()
+{
+	int elC1, elC2;
+	string word;
+	cout << "How many words set 1 will have: ";
+	cin >> elC1;
+
+	cout << "Enter words for set 1:" << endl;
+	for (int i = 0; i < elC1; i++)
+	{
+		cout << "Word " << i + 1 << ": ";
+		cin >> word;
+		stringSet1.push_back(word);
+	}
+
+	cout << "How many words set 2 will have: ";
+	cin >> elC2;
+
+	cout << "Enter words for set 2:" << endl;
+	for (int i = 0; i < elC2; i++)
+	{
+		cout << "Word " << i + 1 << ": ";
+		cin >> word;
+		stringSet2.push_back(word);
+	}
+}
+
+void stringUnionMenu()
+{
+	string yn;
+	bool valid = false;
+	if (stringSet1.size() == 0 && stringSet2.size() == 0)
+	{
+		enterStrings();
+		displayStringUnion();
+	}
+	else
+	{
+		while (!valid)
+		{
+			cout << "Do you want to use words which you enter previously" << endl;
+			cout << "Y/N: ";
+			cin >> yn;
+
+			if (yn != "Y" && yn != "N")
+			{
+				cout << "Incorrects input!";
+			}
+			else
+			{
+				valid = true;
+				if (yn == "Y")
+				{
+					displayStringUnion();
+				}
+				else
+				{
+					stringSet1.clear();
+					stringSet2.clear();
+					enterNums();
+					displayStringUnion();
+				}
+			}
+		}
+
+	}
+
 }
 
 void enterChars()
@@ -301,7 +418,7 @@ void setsUnionMenu()
 	MENU_FUNC_PTR fp = menu({
 			{{ "Numbers" }, numUnionMenu},
 			{{ "Characters" }, charUnionMenu},
-			{{ "Words" }, NULL}
+			{{ "Words" }, stringUnionMenu}
 		});
 
 	fp();
