@@ -10,12 +10,6 @@ vector<char> charSet1, charSet2;
 vector<string> stringSet1, stringSet2;
 
 
-//vector<MENU_ITEM> menu1{
-//	{{ "Operations with sets" }, setsOperationsMenu},
-//	{{ "Options" }, optionsMenu},
-//	{{ "Exit" }, NULL},
-//};
-
 MENU_FUNC_PTR menu2(std::vector<MENU_ITEM> menus)
 {
 	size_t input = 0;
@@ -44,36 +38,6 @@ MENU_FUNC_PTR menu2(std::vector<MENU_ITEM> menus)
 
 	return menus[input - 1].funcPtr;
 }
-
-//void menu(string option1, string option2, string option3, int argCount, int& input, string option4 = " ", string option5 = " ")
-//{
-//
-//	bool isValid = false;
-//
-//	cout << option1 << endl;
-//	cout << option2 << endl;
-//	cout << option3 << endl;
-//	cout << option4 << endl;
-//	cout << option5 << endl;
-//
-//	while (!isValid)
-//	{
-//		cout << "Your choice: ";
-//		cin >> input;
-//		if (cin.fail() || (input < 1 || input >argCount))
-//		{
-//			cinClearIgnore();
-//			isValid = false;
-//			cout << "Number have to be between 1 and " << argCount << endl;
-//		}
-//		else
-//		{
-//			isValid = true;
-//		}
-//	}
-//
-//}
-
 
 vector<int> unionOfSets()
 {
@@ -167,7 +131,6 @@ void displayUnion()
 	cout << endl;
 }
 
-
 void numUnionMenu()
 {
 	char yn;
@@ -210,7 +173,6 @@ void numUnionMenu()
 
 }
 
-
 void setsUnionMenu()
 {
 	cout << "Choose the type of the elements:" << endl;
@@ -243,26 +205,12 @@ void optionsMenu()
 				{{ "Exit" }, NULL}
 		});
 
-
-	exit(0);
-
-
 	fp();
 
 }
 
 void finalLevelMenu()
 {
-	/*while (input != 3)
-	{*/
-	/*	menu(
-			"1) Operations with sets",
-			"2) Options",
-			"3) Exit",
-			3,
-			input
-		);*/
-
 	do
 	{
 		MENU_FUNC_PTR fp = menu2({
@@ -279,26 +227,6 @@ void finalLevelMenu()
 		fp();
 
 	} while (true);
-
-
-	//	switch (input)
-	//	{
-	//	case 1:
-	//		system("cls");
-	//		setsOperationsMenu();
-	//		break;
-	//	case 2:
-	//		system("cls");
-	//		optionsMenu();
-	//		break;
-	//	case 3:
-	//		system("cls");
-	//		cout << "Bye!" << endl;
-	//		exit(0);
-	//		break;
-	//	}
-	///*}*/
-
 
 }
 
