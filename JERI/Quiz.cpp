@@ -15,54 +15,55 @@ void Quiz::addQuestions()
 {
 	// Question 1
 	QUESTIONS.push_back(
-		{ 1,		// ID
-		"What is set",	// Stem
-		{"1) Hot Dog",		// Distract 1
-		 "2) Jelezar",		// Distract 2
-		 "3) Something with numbers",		// Distract 3
-		 "4) Kondoriano Horhe"		// Distract 4
+		{ 1,									// ID
+		"How many elements an empty set has?",	// Stem
+		{"1) 5 or more",						// Distract 1
+		 "2) 0",								// Distract 2
+		 "3) only 1",							// Distract 3
+		 "4) -0 :)"								// Distract 4
 		},
-		1,			// Correct Answer
-		1			// Level
+		2,										// Correct Answer
+		1										// Level
 		}
 	);
 
 	// Question 2
 	QUESTIONS.push_back(
 		{ 1,
-		"What is sechenie",
-		{"1) Krokodil",
-		 "2) Zebra",
-		 "3) Operation with sets",
-		 "4) Muha"
+		"One word to discribe a set?",
+		{"1) Zebra :)",
+		 "2) Diagram",
+		 "3) Collection",
+		 "4) Element"
 		},
-		2,
-		2
+		3,
+		1
 		}
 	);
 
 	// Question 3
 	QUESTIONS.push_back(
 		{ 1,
-		"What picture is sechenie",
-		{"1) Kozo",
-		 "2) This",
-		 "3) Mirko",
-		 "4) Kravarka"
+		"How is it called the relationship of one set being a subset of another ? ",
+		{"1) Inclusion",
+		 "2) Jungle",
+		 "3) Operation",
+		 "4) Property"
 		},
-		2,
-		3
+		1,
+		1
 		}
 	);
+
 
 	// Question 4
 	QUESTIONS.push_back(
 		{ 1,
-		"What is subset",
-		{"1) Kuzu",
-		 "2) Me",
-		 "3) Gandau",
-		 "4) This"
+		"How many relationships represent the Venn diagram?",
+		{"1) only 1",
+		 "2) ALL",
+		 "3) more than 10",
+		 "4) 0"
 		},
 		2,
 		1
@@ -136,6 +137,7 @@ bool Quiz::checkAnswer(int id, int userAnswer)
 void Quiz::showResults(int correctAnswersCount, int answersCount)
 {
 	float percentage = ((float)correctAnswersCount / (float)answersCount) * 100;
+	cout << endl;
 	cout << "Result " << correctAnswersCount << " / " << answersCount << endl;
 	cout << percentage << "%" << endl;
 	cout << endl;
