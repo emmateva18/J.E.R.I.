@@ -3,6 +3,7 @@
 #include <iostream>
 #include "struct.h"
 #include <vector>
+#include "JERI.cpp"
 using namespace std;
 
 vector<int> numSet1, numSet2;
@@ -434,10 +435,15 @@ void displayCharSymDifference()
 	}
 	else
 	{
+		cout << "(A " << u8"\u0394" << " B) = { ";
 		for (size_t i = 0; i < symDifferenceSets.size(); i++)
 		{
 			cout << symDifferenceSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		symmetricDifferenceDiagram();
 	}
 
 
@@ -461,10 +467,16 @@ void displayNumSymDifference()
 	}
 	else
 	{
+		cout << "(A " << u8"\u0394"<<" B) = { ";
 		for (size_t i = 0; i < symDifferenceSets.size(); i++)
 		{
+			
 			cout << symDifferenceSets[i] << " ";
 		}
+		cout << "}"<<endl;
+		cout << endl;
+		cout << endl;
+		symmetricDifferenceDiagram();
 	}
 
 
@@ -483,10 +495,15 @@ void displayStringSymDifference()
 	}
 	else
 	{
+		cout << "(A " << u8"\u0394" << " B) = { ";
 		for (size_t i = 0; i < symDifferenceSets.size(); i++)
 		{
 			cout << symDifferenceSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		symmetricDifferenceDiagram();
 	}
 
 
@@ -648,10 +665,15 @@ void displayCharDifference()
 	}
 	else
 	{
+		cout << "(A  / B) = { ";
 		for (size_t i = 0; i < differenceSets.size(); i++)
 		{
 			cout << differenceSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		differenceDiagram();
 	}
 
 
