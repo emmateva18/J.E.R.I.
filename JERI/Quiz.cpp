@@ -29,7 +29,7 @@ void Quiz::addQuestions()
 
 	// Question 2
 	QUESTIONS.push_back(
-		{ 1,
+		{ 2,
 		"One word to discribe a set?",
 		{"1) Zebra :)",
 		 "2) Diagram",
@@ -43,7 +43,7 @@ void Quiz::addQuestions()
 
 	// Question 3
 	QUESTIONS.push_back(
-		{ 1,
+		{ 3,
 		"How is it called the relationship of one set being a subset of another ? ",
 		{"1) Inclusion",
 		 "2) Jungle",
@@ -58,7 +58,7 @@ void Quiz::addQuestions()
 
 	// Question 4
 	QUESTIONS.push_back(
-		{ 1,
+		{ 4,
 		"How many relationships represent the Venn diagram?",
 		{"1) only 1",
 		 "2) ALL",
@@ -67,6 +67,58 @@ void Quiz::addQuestions()
 		},
 		2,
 		1
+		}
+	);
+
+	QUESTIONS.push_back(
+		{ 5,
+		"What represents A U B?",
+		{"1) Belong only to A set",
+		 "2) Belong only to B set",
+		 "3) Belong to both sets",
+		 "4) Boesn't belong anywhere"
+		},
+		3,
+		2
+		}
+	);
+	
+	QUESTIONS.push_back(
+		{ 6,
+		"What is intersection ? ",
+		{"1) All elements from both sets",
+		 "2) Collection of all elemnts that are common",
+		 "3) Collection of all elemnts that aren't common",
+		 "4) Only the elemnts from set A"
+		},
+		2,
+		2
+		}
+	);
+	
+	QUESTIONS.push_back(
+		{ 7,
+		"How can you write the difference between sets? ",
+		{"1) A U B",
+		 "2) A / B",
+		 "3) A - B",
+		 "4) A + B"
+		},
+		3,
+		2
+		}
+	);	
+	
+	QUESTIONS.push_back(
+		{ 8,
+		"What is the other name of symmetric set? ",
+		{"1) disjoint set",
+		 "2) set",
+		 "3) symmetric set",
+		 "4) disjunctive union"
+		},
+		4,
+		2
 		}
 	);
 
