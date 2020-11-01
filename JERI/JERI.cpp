@@ -139,7 +139,6 @@ void levels(int level, string username)
 			cout << "Now I will show you some operations with sets!" << endl;
 			cout << endl;
 			cout << "Let A = {2, 4, 6, 8} and B = {6, 8, 10, 12}. Then, A U B is represented as the set containing all the elements that belong to both the sets individually." << endl;
-			cout << "Mathematically, A U B = {x : x ϵ A or x ϵ B}" << endl;
 			cout << endl;
 			cout << "An intersection is the collection of all the elements that are common to all the sets under consideration." << endl;
 			cout << "Let A = {2, 4, 6, 8} and B = {6, 8, 10, 12} then A ∩ B." << endl;
@@ -157,6 +156,28 @@ void levels(int level, string username)
 
 		case 3:
 			cout << "Examples of sets" << endl;
+			cout << "This is an union:" << endl;
+			cout << endl;
+			unionDiagram();
+			cout << endl;
+			cout << "The union is marked with U." << endl;
+			cout << "A U B = {x : x ϵ A or x ϵ B}" << endl;
+			cout << endl;
+			cout << "This is an intersection:" << endl;
+			cout << endl;
+			intersectionDiagram();
+			cout << "The intersection is marked with " << u8"\u2229" << endl;
+			cout << endl;
+			cout << "This is a difference:" << endl;
+			cout << endl;
+			differenceDiagram();
+			cout << endl;
+			cout<<"The difference is marked with /"<< endl;
+			cout << endl;
+			cout << "This is symmetric difference:" << endl;
+			cout << endl;
+			symmetricDifferenceDiagram();
+			cout << "The symemetric difference is marked with " << u8"\u0394" << endl;
 			quiz.QuizMenu(3);
 			cout << "You completed level 3" << endl;
 			saveUserData(username, 3);
@@ -193,7 +214,7 @@ void greetings(string& username, int& level)
 
 int main()
 {
-
+	system("chcp 65001");
 
 	string username = getUsername();
 	int level = getLevel();
