@@ -86,6 +86,9 @@ void levels(int level, string username)
 			cout << "Now that you know what is set, I will tell you more about \"subset\"." << endl;
 			cout << "Mathematically, a set A is referred to as the subset of another set B, if every element of set A is also an element of set B." << endl;
 			cout << "The relationship of one set being a subset of another is called inclusion." << endl;
+			cout << "We will countinue with the meaning of empty set. In mathematics, the empty set is the unique set having no elements and its size is zero." << endl;
+			cout << "Something interesting is that a Venn diagram is a diagrammatic representation of ALL the possible relationships between different sets of a limited number of elements. " << endl;
+			cout << "Now we have a little fun quiz for you " << username << endl;
 			quiz.QuizMenu(1);
 			cout << "You completed level 1" << endl;
 			saveUserData(username, 1);
