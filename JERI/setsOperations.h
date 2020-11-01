@@ -18,25 +18,38 @@ std::vector<char> intersectionOfCharSets();
 
 std::vector<std::string> intersectionOfStringSets();
 
+std::vector<char> differenceOfCharSets();
+
+std::vector<char> differenceOfCharSets();
+
+std::vector<std::string> differenceOfStringSets();
+
+
+
+
 /*---------PRESENTATION-------------*/
 
 MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus);
 
+// Diference
+
+
+
 // Intersection
 
-void displayStringIntersection();
+void displayStringDifference();
 
-void displayCharIntersection();
+void displayCharDifference();
 
-void displayNumIntersection();
+void displayNumDifference();
 
-void stringIntersectionMenu();
+void stringDifferenceMenu();
 
-void charIntersectionMenu();
+void charDifferenceMenu();
 
-void numIntersectionMenu();
+void numDifferenceMenu();
 
-void setsIntersectionMenu();
+void setsDifferenceMenu();
 
 
 //Union

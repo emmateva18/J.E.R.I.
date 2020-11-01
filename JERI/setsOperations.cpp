@@ -119,7 +119,7 @@ vector<string> unionOfStringSets()
 
 vector<char> intersectionOfCharSets()
 {
-	
+
 	vector<char> intersectionS;
 
 	for (size_t i = 0; i < charSet1.size(); i++)
@@ -175,6 +175,89 @@ vector<string> intersectionOfStringSets()
 /*----------INTERSECTION-LOGIC-------------*/
 
 
+/*----------DIFFERENCE-LOGIC-------------*/
+
+vector<char> differenceOfCharSets()
+{
+
+	int diffC = 0; // Count equal elements
+	vector<char> differenceSet;
+
+	for (size_t i = 0; i < charSet1.size(); i++)
+	{
+		diffC = 0;
+		for (size_t k = 0; k < charSet2.size(); k++)
+		{
+			if (charSet1[i] == charSet2[k])
+			{
+				diffC++;
+			}
+		}
+		if (diffC == 0)
+		{
+			differenceSet.push_back(charSet1[i]);
+		}
+	}
+
+	return differenceSet;
+
+}
+
+vector<int> differenceOfNumSets()
+{
+
+	int diffC = 0; // Count equal elements
+	vector<int> differenceSet;
+
+	for (size_t i = 0; i < numSet1.size(); i++)
+	{
+		diffC = 0;
+		for (size_t k = 0; k < numSet2.size(); k++)
+		{
+			if (numSet1[i] == numSet2[k])
+			{
+				diffC++;
+			}
+		}
+		if (diffC == 0)
+		{
+			differenceSet.push_back(numSet1[i]);
+		}
+	}
+
+	return differenceSet;
+
+}
+
+vector<string> differenceOfStringSets()
+{
+	int diffC = 0; // Count equal elements
+	vector<string> differenceSet;
+
+	for (size_t i = 0; i < stringSet1.size(); i++)
+	{
+		diffC = 0;
+		for (size_t k = 0; k < stringSet2.size(); k++)
+		{
+			if (stringSet1[i] == stringSet2[k])
+			{
+				diffC++;
+			}
+		}
+		if (diffC == 0)
+		{
+			differenceSet.push_back(stringSet1[i]);
+		}
+	}
+
+	return differenceSet;
+
+}
+
+/*----------DIFFERENCE-LOGIC-------------*/
+
+
+
 
 
 MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
@@ -206,6 +289,215 @@ MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
 	return menus[input - 1].funcPtr;
 }
 
+
+
+/*----------DIFFERENCE-PRESENTATION-------*/
+
+void displayCharDifference()
+{
+	vector<char> differenceSets = differenceOfCharSets();
+
+	cout << "Difference" << endl;
+
+	if (differenceSets.size() == 0)
+	{
+		cout << "No Difference" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < differenceSets.size(); i++)
+		{
+			cout << differenceSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
+}
+
+void displayNumDifference()
+{
+	vector<int> differenceSets = differenceOfNumSets();
+
+	cout << "Difference" << endl;
+
+	if (differenceSets.size() == 0)
+	{
+		cout << "No Difference" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < differenceSets.size(); i++)
+		{
+			cout << differenceSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
+}
+
+void displayStringDifference()
+{
+	vector<string> differenceSets = differenceOfStringSets();
+
+	cout << "Difference" << endl;
+
+	if (differenceSets.size() == 0)
+	{
+		cout << "No Difference" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < differenceSets.size(); i++)
+		{
+			cout << differenceSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
+}
+
+void stringDifferenceMenu()
+{
+	string yn;
+	bool valid = false;
+	if (stringSet1.size() == 0 && stringSet2.size() == 0)
+	{
+		enterStrings();
+		displayStringDifference();
+	}
+	else
+	{
+		while (!valid)
+		{
+			cout << "Do you want to use words which you enter previously" << endl;
+			cout << "Y/N: ";
+			cin >> yn;
+
+			if (yn != "Y" && yn != "N")
+			{
+				cout << "Incorrects input!";
+			}
+			else
+			{
+				valid = true;
+				if (yn == "Y")
+				{
+					displayStringDifference();
+				}
+				else
+				{
+					stringSet1.clear();
+					stringSet2.clear();
+					enterNums();
+					displayStringDifference();
+				}
+			}
+		}
+
+	}
+
+}
+
+void charDifferenceMenu()
+{
+	string yn;
+	bool valid = false;
+	if (charSet1.size() == 0 && charSet2.size() == 0)
+	{
+		enterChars();
+		displayCharDifference();
+	}
+	else
+	{
+		while (!valid)
+		{
+			cout << "Do you want to use characters which you enter previously" << endl;
+			cout << "Y/N: ";
+			cin >> yn;
+
+			if (yn != "Y" && yn != "N")
+			{
+				cout << "Incorrect input!";
+			}
+			else
+			{
+				valid = true;
+				if (yn == "Y")
+				{
+					displayCharDifference();
+				}
+				else
+				{
+					charSet1.clear();
+					charSet2.clear();
+					enterNums();
+					displayCharDifference();
+				}
+			}
+		}
+
+	}
+
+}
+
+void numDifferenceMenu()
+{
+	char yn;
+	bool valid = false;
+	if (numSet1.size() == 0)
+	{
+		enterNums();
+		displayNumDifference();
+	}
+	else
+	{
+		while (!valid)
+		{
+			cout << "Do you want to use numbers which you enter previously" << endl;
+			cout << "Y/N: ";
+			cin >> yn;
+
+			if (yn != 'Y' && yn != 'N')
+			{
+				cout << "Incorrect input!";
+			}
+			else
+			{
+				valid = true;
+				if (yn == 'Y')
+				{
+					displayNumDifference();
+				}
+				else
+				{
+					numSet1.clear();
+					numSet2.clear();
+					enterNums();
+					displayNumDifference();
+				}
+			}
+		}
+
+	}
+
+}
+
+void setsDifferenceMenu()
+{
+	cout << "Choose the type of the elements:" << endl;
+	MENU_FUNC_PTR fp = menu({
+			{{ "Numbers" }, numDifferenceMenu},
+			{{ "Characters" }, charDifferenceMenu},
+			{{ "Words" }, stringDifferenceMenu}
+		});
+
+	fp();
+}
+
+/*----------DIFFERENCE-PRESENTATION-------*/
 
 
 /*----------INTERSECTION-PRESENTATION-------*/
@@ -415,10 +707,6 @@ void setsIntersectionMenu()
 }
 
 /*----------INTERSECTION-PRESENTATION-------*/
-
-
-
-
 
 
 /*----------UNION-PRESENTATION-------*/
@@ -714,7 +1002,7 @@ void setsOperationsMenu()
 	MENU_FUNC_PTR fp = menu({
 				{{ "Union of Sets" }, setsUnionMenu},
 				{{ "Intersection of Sets" }, setsIntersectionMenu},
-				{{ "Difference of Sets" }, NULL},
+				{{ "Difference of Sets" }, setsDifferenceMenu},
 				{{ "Symmetric Difference" }, NULL}
 		});
 
@@ -753,7 +1041,3 @@ void finalLevelMenu()
 	} while (true);
 
 }
-
-
-
-
