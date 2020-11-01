@@ -193,7 +193,6 @@ void greetings(string& username, int& level)
 
 int main()
 {
-	intersectionDiagram();
 
 
 	string username = getUsername();
