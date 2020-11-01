@@ -77,7 +77,15 @@ void levels(int level, string username)
 	switch (level)
 	{
 		case 1:
-			cout << "Set is something with numbers" << endl;
+			cout << "You have a great name " << username << "!"<< endl;
+			cout << endl;
+			cout << "Let's start with explanioin of the word \"set\"." << endl;
+			cout << "Well, simply put, it's a collection. First we specify a common property among" << endl;
+			cout<< "things and then we gather up all the things that have this common property." << endl;
+			cout << endl;
+			cout << "Now that you know what is set, I will tell you more about \"subset\"." << endl;
+			cout << "Mathematically, a set A is referred to as the subset of another set B, if every element of set A is also an element of set B." << endl;
+			cout << "The relationship of one set being a subset of another is called inclusion." << endl;
 			quiz.QuizMenu(1);
 			cout << "You completed level 1" << endl;
 			saveUserData(username, 1);
@@ -110,7 +118,9 @@ void greetings(string& username, int& level)
 {
 	if (!checkUserData(username, level))
 	{
-		cout << "Hello blalalalal\n";
+		cout << "Hello User! How are you doing today?" << endl;
+		cout << "My name is Jeri and today I will tell you more about different types and operation with sets!" << endl;
+		cout<< "But first tell me your name? " <<endl;
 		cout << "Name: ";
 		cin >> username;
 		levels(1, username);
