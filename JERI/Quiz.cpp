@@ -121,6 +121,59 @@ void Quiz::addQuestions()
 		2
 		}
 	);
+	
+	QUESTIONS.push_back(
+		{ 9,
+		"With what symbol is marked the uniîn? ",
+		{"1) U",
+		 "2) /",
+		 "3) +",
+		 "4) " u8"\u0394", 
+		},
+		1,
+		3
+		}
+	);
+	
+	QUESTIONS.push_back(
+		{ 10,
+		"With what symbol is marked the intersection? ",
+		{"1) P",
+		 "2) " u8"\u2229",
+		 "3) +",
+		 "4) *", 
+		},
+		2,
+		3
+		}
+	);
+
+	QUESTIONS.push_back(
+		{ 11,
+		"With what symbol is marked the difference? ",
+		{"1) " u8"\u2229",
+		 "2) &",
+		 "3) -",
+		 "4) /",
+		},
+		4,
+		3
+		}
+	);
+	
+	QUESTIONS.push_back(
+		{ 12,
+		"With what symbol is marked the symmetric difference? ",
+		{"1) ^",
+		 "2) =",
+		 "3) " u8"\u0394",
+		 "4) " u8"\u2229",
+		},
+		3,
+		3
+		}
+	);
+
 
 }
 
