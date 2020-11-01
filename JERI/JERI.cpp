@@ -183,7 +183,12 @@ void levels(int level, string username)
 			saveUserData(username, 3);
 
 		case 4:
-			cout << "Final level" << endl;
+	
+			cout << endl;
+			cout << "You completed all the levels!" << endl;
+			cout << "Congratulations!" << endl;
+			cout << endl;
+			cout << "Now you can try with numbers of your choice!" << endl;
 			saveUserData(username, 4);
 			finalLevelMenu();
 			break;
