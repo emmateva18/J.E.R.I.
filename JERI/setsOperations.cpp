@@ -394,6 +394,7 @@ MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
 	size_t input = 0;
 	bool isValid = false;
 
+	
 	for (size_t i = 0; i < menus.size(); i++)
 	{
 		cout << i + 1 << ") " << menus[i].text << endl;
@@ -437,6 +438,11 @@ void displayCharSymDifference()
 			cout << symDifferenceSets[i] << " ";
 		}
 	}
+
+
+
+
+
 
 
 	cout << endl;
