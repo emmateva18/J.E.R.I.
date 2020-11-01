@@ -10,6 +10,8 @@ vector<char> charSet1, charSet2;
 vector<string> stringSet1, stringSet2;
 
 
+/*----------UNION-LOGIC-------------*/
+
 vector<char> unionOfCharSets()
 {
 	vector<char> unionS;
@@ -110,6 +112,70 @@ vector<string> unionOfStringSets()
 	return unionS;
 }
 
+/*----------UNION-LOGIC-------------*/
+
+
+/*----------INTERSECTION-LOGIC-------------*/
+
+vector<char> intersectionOfCharSets()
+{
+	
+	vector<char> intersectionS;
+
+	for (size_t i = 0; i < charSet1.size(); i++)
+	{
+		for (size_t k = 0; k < charSet2.size(); k++)
+		{
+			if (charSet1[i] == charSet2[k])
+			{
+				intersectionS.push_back(charSet1[i]);
+			}
+		}
+	}
+
+	return intersectionS;
+}
+
+vector<int> intersectionOfNumSets()
+{
+	vector<int> intersectionS;
+
+	for (size_t i = 0; i < numSet1.size(); i++)
+	{
+		for (size_t k = 0; k < numSet2.size(); k++)
+		{
+			if (numSet1[i] == numSet2[k])
+			{
+				intersectionS.push_back(numSet1[i]);
+			}
+		}
+	}
+
+	return intersectionS;
+}
+
+vector<string> intersectionOfStringSets()
+{
+	vector<string> intersectionS;
+
+	for (size_t i = 0; i < stringSet1.size(); i++)
+	{
+		for (size_t k = 0; k < stringSet2.size(); k++)
+		{
+			if (stringSet1[i] == stringSet2[k])
+			{
+				intersectionS.push_back(stringSet1[i]);
+			}
+		}
+	}
+
+	return intersectionS;
+}
+
+/*----------INTERSECTION-LOGIC-------------*/
+
+
+
 
 MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
 {
@@ -139,6 +205,223 @@ MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
 
 	return menus[input - 1].funcPtr;
 }
+
+
+
+/*----------INTERSECTION-PRESENTATION-------*/
+
+void displayCharIntersection()
+{
+	vector<char> intersectionSets = intersectionOfCharSets();
+
+	cout << "Intersection" << endl;
+
+	if (intersectionSets.size() == 0)
+	{
+		cout << "No intersection" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < intersectionSets.size(); i++)
+		{
+			cout << intersectionSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
+}
+
+void displayNumIntersection()
+{
+	vector<int> intersectionSets = intersectionOfNumSets();
+
+	cout << "Intersection" << endl;
+
+	if (intersectionSets.size() == 0)
+	{
+		cout << "No intersection" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < intersectionSets.size(); i++)
+		{
+			cout << intersectionSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
+}
+
+void displayStringIntersection()
+{
+	vector<string> intersectionSets = intersectionOfStringSets();
+
+	cout << "Intersection" << endl;
+
+	if (intersectionSets.size() == 0)
+	{
+		cout << "No Intersection" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < intersectionSets.size(); i++)
+		{
+			cout << intersectionSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
+}
+
+void stringIntersectionMenu()
+{
+	string yn;
+	bool valid = false;
+	if (stringSet1.size() == 0 && stringSet2.size() == 0)
+	{
+		enterStrings();
+		displayStringIntersection();
+	}
+	else
+	{
+		while (!valid)
+		{
+			cout << "Do you want to use words which you enter previously" << endl;
+			cout << "Y/N: ";
+			cin >> yn;
+
+			if (yn != "Y" && yn != "N")
+			{
+				cout << "Incorrects input!";
+			}
+			else
+			{
+				valid = true;
+				if (yn == "Y")
+				{
+					displayStringIntersection();
+				}
+				else
+				{
+					stringSet1.clear();
+					stringSet2.clear();
+					enterNums();
+					displayStringIntersection();
+				}
+			}
+		}
+
+	}
+
+}
+
+void charIntersectionMenu()
+{
+	string yn;
+	bool valid = false;
+	if (charSet1.size() == 0 && charSet2.size() == 0)
+	{
+		enterChars();
+		displayCharIntersection();
+	}
+	else
+	{
+		while (!valid)
+		{
+			cout << "Do you want to use characters which you enter previously" << endl;
+			cout << "Y/N: ";
+			cin >> yn;
+
+			if (yn != "Y" && yn != "N")
+			{
+				cout << "Incorrect input!";
+			}
+			else
+			{
+				valid = true;
+				if (yn == "Y")
+				{
+					displayCharIntersection();
+				}
+				else
+				{
+					charSet1.clear();
+					charSet2.clear();
+					enterNums();
+					displayCharIntersection();
+				}
+			}
+		}
+
+	}
+
+}
+
+void numIntersectionMenu()
+{
+	char yn;
+	bool valid = false;
+	if (numSet1.size() == 0)
+	{
+		enterNums();
+		displayNumIntersection();
+	}
+	else
+	{
+		while (!valid)
+		{
+			cout << "Do you want to use numbers which you enter previously" << endl;
+			cout << "Y/N: ";
+			cin >> yn;
+
+			if (yn != 'Y' && yn != 'N')
+			{
+				cout << "Incorrect input!";
+			}
+			else
+			{
+				valid = true;
+				if (yn == 'Y')
+				{
+					displayNumIntersection();
+				}
+				else
+				{
+					numSet1.clear();
+					numSet2.clear();
+					enterNums();
+					displayNumIntersection();
+				}
+			}
+		}
+
+	}
+
+}
+
+void setsIntersectionMenu()
+{
+	cout << "Choose the type of the elements:" << endl;
+	MENU_FUNC_PTR fp = menu({
+			{{ "Numbers" }, numIntersectionMenu},
+			{{ "Characters" }, charIntersectionMenu},
+			{{ "Words" }, stringIntersectionMenu}
+		});
+
+	fp();
+}
+
+/*----------INTERSECTION-PRESENTATION-------*/
+
+
+
+
+
+
+/*----------UNION-PRESENTATION-------*/
 
 void displayCharUnion()
 {
@@ -372,7 +655,7 @@ void enterNums()
 
 void numUnionMenu()
 {
-	char yn;
+	string yn;
 	bool valid = false;
 	if (numSet1.size() == 0)
 	{
@@ -387,14 +670,14 @@ void numUnionMenu()
 			cout << "Y/N: ";
 			cin >> yn;
 
-			if (yn != 'Y' && yn != 'N')
+			if (yn != "Y" && yn != "N")
 			{
 				cout << "Incorrects input!";
 			}
 			else
 			{
 				valid = true;
-				if (yn == 'Y')
+				if (yn == "Y")
 				{
 					displayNumUnion();
 				}
@@ -424,11 +707,13 @@ void setsUnionMenu()
 	fp();
 }
 
+/*----------UNION-PRESENTATION-------*/
+
 void setsOperationsMenu()
 {
 	MENU_FUNC_PTR fp = menu({
 				{{ "Union of Sets" }, setsUnionMenu},
-				{{ "Intersection of Sets" }, NULL},
+				{{ "Intersection of Sets" }, setsIntersectionMenu},
 				{{ "Difference of Sets" }, NULL},
 				{{ "Symmetric Difference" }, NULL}
 		});
@@ -439,9 +724,9 @@ void setsOperationsMenu()
 void optionsMenu()
 {
 	MENU_FUNC_PTR fp = menu({
-				{{ "Operations with sets" }, setsOperationsMenu},
-				{{ "Options" }, optionsMenu},
-				{{ "Exit" }, NULL}
+				{{ "Reset game" }, NULL},
+				{{ "Go to previous level" }, NULL},
+				{{ "Change Username" }, NULL}
 		});
 
 	fp();

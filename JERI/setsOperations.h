@@ -12,9 +12,34 @@ std::vector<char> unionOfCharSets();
 
 std::vector<std::string> unionOfStringSets();
 
+std::vector<char> intersectionOfCharSets();
+
+std::vector<char> intersectionOfCharSets();
+
+std::vector<std::string> intersectionOfStringSets();
+
 /*---------PRESENTATION-------------*/
 
 MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus);
+
+// Intersection
+
+void displayStringIntersection();
+
+void displayCharIntersection();
+
+void displayNumIntersection();
+
+void stringIntersectionMenu();
+
+void charIntersectionMenu();
+
+void numIntersectionMenu();
+
+void setsIntersectionMenu();
+
+
+//Union
 
 void displayStringUnion();
 
