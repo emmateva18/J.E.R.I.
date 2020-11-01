@@ -8,24 +8,14 @@
 using namespace std;
 
 
-void intersectionDiagram()
-{
-	cout << "    ******     ******   " << endl;
-	cout << "   *      ***       *" << endl;
-	cout << "  *      *****       *" << endl;
-	cout << "  *      *****       *" << endl;
-	cout << "   *      ***       *" << endl;
-	cout << "    *****     *****   " << endl;
-}
-
 void unionDiagram()
 {
-	cout << "     ******        ******" << endl;
-	cout << "   ***********   **********" << endl;
-	cout << "  ************* *************" << endl;
-	cout << "  ************* *************" << endl;
-	cout << "   ***********   ***********" << endl;
-	cout << "     *******       *******" << endl;
+	cout << "    *****     ******   " << endl;
+	cout << "  *       ***        *" << endl;
+	cout << "  *      *****       *" << endl;
+	cout << "  *      *****       *" << endl;
+	cout << "  *       ***       *" << endl;
+	cout << "    *****     *****   " << endl;
 }
 
 string getUsername()
@@ -173,7 +163,7 @@ void greetings(string& username, int& level)
 
 int main()
 {
-	intersectionDiagram();
+	unionDiagram();
 
 
 	string username = getUsername();
