@@ -257,6 +257,135 @@ vector<string> differenceOfStringSets()
 /*----------DIFFERENCE-LOGIC-------------*/
 
 
+/*----------SYMETRIC-DIFFERENCE-LOGIC-------------*/
+
+
+vector<char> differenceOfCharSetsBA()
+{
+
+	int diffC = 0; // Count equal elements
+	vector<char> differenceSet;
+
+	for (size_t i = 0; i < charSet2.size(); i++)
+	{
+		diffC = 0;
+		for (size_t k = 0; k < charSet1.size(); k++)
+		{
+			if (charSet2[i] == charSet1[k])
+			{
+				diffC++;
+			}
+		}
+		if (diffC == 0)
+		{
+			differenceSet.push_back(charSet2[i]);
+		}
+	}
+
+	return differenceSet;
+
+}
+
+vector<int> differenceOfNumSetsBA()
+{
+
+	int diffC = 0; // Count equal elements
+	vector<int> differenceSet;
+
+	for (size_t i = 0; i < numSet2.size(); i++)
+	{
+		diffC = 0;
+		for (size_t k = 0; k < numSet1.size(); k++)
+		{
+			if (numSet2[i] == numSet1[k])
+			{
+				diffC++;
+			}
+		}
+		if (diffC == 0)
+		{
+			differenceSet.push_back(numSet2[i]);
+		}
+	}
+
+	return differenceSet;
+
+}
+
+vector<string> differenceOfStringSetsBA()
+{
+	int diffC = 0; // Count equal elements
+	vector<string> differenceSet;
+
+	for (size_t i = 0; i < stringSet2.size(); i++)
+	{
+		diffC = 0;
+		for (size_t k = 0; k < stringSet1.size(); k++)
+		{
+			if (stringSet2[i] == stringSet1[k])
+			{
+				diffC++;
+			}
+		}
+		if (diffC == 0)
+		{
+			differenceSet.push_back(stringSet2[i]);
+		}
+	}
+
+	return differenceSet;
+
+}
+
+
+vector<char> symDifferenceOfCharSets()
+{
+
+	return {1,2,3,4};
+}
+
+vector<int> symDifferenceOfNumSets()
+{
+	vector<int> difA = differenceOfNumSets();
+	vector<int> difB = differenceOfNumSetsBA();
+
+	vector<int> symDif;
+
+	int temp;
+	size_t count = 0;
+	for (size_t i = 0; i < difA.size(); i++)
+	{
+		for (size_t j = 0; j < difB.size() - count; j++)
+		{
+			if (difA[i] == difB[j])
+			{
+				temp = difB[j];
+				difB[j] = difB[difB.size() - 1 - count];
+				difB[numSet2.size() - 1 - count] = temp;
+				count++;
+			}
+		}
+		symDif.push_back(difA[i]);
+	}
+	for (int i = 0; i < difB.size() - count; i++)
+	{
+		symDif.push_back(difB[i]);
+	}
+
+	return symDif;
+	
+}
+
+vector<string> symDifferenceOfStringSets()
+{
+	return { "1","2:","3","ss4|" };
+
+}
+
+
+/*----------SYMETRIC-DIFFERENCE-LOGIC-------------*/
+
+
 
 
 
@@ -289,6 +418,213 @@ MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
 	return menus[input - 1].funcPtr;
 }
 
+/*----------SYMETRIC-DIFFERENCE-PRESENTATION-------*/
+
+void displayCharSymDifference()
+{
+	vector<char> symDifferenceSets = symDifferenceOfCharSets();
+
+	cout << "Symetric Difference" << endl;
+
+	if (symDifferenceSets.size() == 0)
+	{
+		cout << "No Symetric Difference" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < symDifferenceSets.size(); i++)
+		{
+			cout << symDifferenceSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
+}
+
+void displayNumSymDifference()
+{
+	vector<int> symDifferenceSets = symDifferenceOfNumSets();
+
+	cout << "Symetric Difference" << endl;
+
+	if (symDifferenceSets.size() == 0)
+	{
+		cout << "No Symetric Difference" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < symDifferenceSets.size(); i++)
+		{
+			cout << symDifferenceSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
+}
+
+void displayStringSymDifference()
+{
+	vector<string> symDifferenceSets = symDifferenceOfStringSets();
+
+	cout << "Symetric Difference" << endl;
+
+	if (symDifferenceSets.size() == 0)
+	{
+		cout << "No Symetric Difference" << endl;
+	}
+	else
+	{
+		for (size_t i = 0; i < symDifferenceSets.size(); i++)
+		{
+			cout << symDifferenceSets[i] << " ";
+		}
+	}
+
+
+	cout << endl;
+}
+
+void stringSymDifferenceMenu()
+{
+	string yn;
+	bool valid = false;
+	if (stringSet1.size() == 0 && stringSet2.size() == 0)
+	{
+		enterStrings();
+		displayStringSymDifference();
+	}
+	else
+	{
+		while (!valid)
+		{
+			cout << "Do you want to use words which you enter previously" << endl;
+			cout << "Y/N: ";
+			cin >> yn;
+
+			if (yn != "Y" && yn != "N")
+			{
+				cout << "Incorrects input!";
+			}
+			else
+			{
+				valid = true;
+				if (yn == "Y")
+				{
+					displayStringSymDifference();
+				}
+				else
+				{
+					stringSet1.clear();
+					stringSet2.clear();
+					enterNums();
+					displayStringSymDifference();
+				}
+			}
+		}
+
+	}
+
+}
+
+void charSymDifferenceMenu()
+{
+	string yn;
+	bool valid = false;
+	if (charSet1.size() == 0 && charSet2.size() == 0)
+	{
+		enterChars();
+		displayCharSymDifference();
+	}
+	else
+	{
+		while (!valid)
+		{
+			cout << "Do you want to use characters which you enter previously" << endl;
+			cout << "Y/N: ";
+			cin >> yn;
+
+			if (yn != "Y" && yn != "N")
+			{
+				cout << "Incorrect input!";
+			}
+			else
+			{
+				valid = true;
+				if (yn == "Y")
+				{
+					displayCharSymDifference();
+				}
+				else
+				{
+					charSet1.clear();
+					charSet2.clear();
+					enterNums();
+					displayCharSymDifference();
+				}
+			}
+		}
+
+	}
+
+}
+
+void numSymDifferenceMenu()
+{
+	string yn;
+	bool valid = false;
+	if (numSet1.size() == 0)
+	{
+		enterNums();
+		displayNumSymDifference();
+	}
+	else
+	{
+		while (!valid)
+		{
+			cout << "Do you want to use numbers which you enter previously" << endl;
+			cout << "Y/N: ";
+			cin >> yn;
+
+			if (yn != "Y" && yn != "N")
+			{
+				cout << "Incorrect input!";
+			}
+			else
+			{
+				valid = true;
+				if (yn == "Y")
+				{
+					displayNumSymDifference();
+				}
+				else
+				{
+					numSet1.clear();
+					numSet2.clear();
+					enterNums();
+					displayNumSymDifference();
+				}
+			}
+		}
+
+	}
+
+}
+
+void setsSymDifferenceMenu()
+{
+	cout << "Choose the type of the elements:" << endl;
+	MENU_FUNC_PTR fp = menu({
+			{{ "Numbers" }, numSymDifferenceMenu},
+			{{ "Characters" }, charSymDifferenceMenu},
+			{{ "Words" }, stringSymDifferenceMenu}
+		});
+
+	fp();
+}
+
+/*----------SYMETRIC-DIFFERENCE-PRESENTATION-------*/
 
 
 /*----------DIFFERENCE-PRESENTATION-------*/
@@ -1003,7 +1339,7 @@ void setsOperationsMenu()
 				{{ "Union of Sets" }, setsUnionMenu},
 				{{ "Intersection of Sets" }, setsIntersectionMenu},
 				{{ "Difference of Sets" }, setsDifferenceMenu},
-				{{ "Symmetric Difference" }, NULL}
+				{{ "Symmetric Difference" }, setsSymDifferenceMenu}
 		});
 
 	fp();

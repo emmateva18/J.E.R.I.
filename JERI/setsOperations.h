@@ -24,15 +24,55 @@ std::vector<char> differenceOfCharSets();
 
 std::vector<std::string> differenceOfStringSets();
 
+std::vector<char> symDifferenceOfCharSets();
 
+std::vector<char> symDifferenceOfCharSets();
+
+std::vector<std::string> symDifferenceOfStringSets();
+
+std::vector<char> differenceOfCharSetsBA();
+
+std::vector<char> differenceOfCharSetsBA();
+
+std::vector<std::string> differenceOfStringSetsBA();
 
 
 /*---------PRESENTATION-------------*/
 
 MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus);
 
+// Symetric Diference
+
+void displayCharSymDifference();
+
+void displayNumSymDifference();
+
+void displayStringSymDifference();
+
+void stringSymDifferenceMenu();
+
+void charSymDifferenceMenu();
+
+void numSymDifferenceMenu();
+
+void setsSymDifferenceMenu();
+
+
 // Diference
 
+void displayCharDifference();
+
+void displayNumDifference();
+
+void displayStringDifference();
+
+void stringDifferenceMenu();
+
+void charDifferenceMenu();
+
+void numDifferenceMenu();
+
+void setsDifferenceMenu();
 
 
 // Intersection
@@ -73,6 +113,9 @@ void enterNums();
 void numUnionMenu();
 
 void setsUnionMenu();
+
+
+// Final Level
 
 void setsOperationsMenu();
 
