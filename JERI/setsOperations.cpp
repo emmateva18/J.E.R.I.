@@ -692,10 +692,15 @@ void displayNumDifference()
 	}
 	else
 	{
+		cout << "(A  / B) = { ";
 		for (size_t i = 0; i < differenceSets.size(); i++)
 		{
 			cout << differenceSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		differenceDiagram();
 	}
 
 
@@ -714,10 +719,15 @@ void displayStringDifference()
 	}
 	else
 	{
+		cout << "(A  / B) = { ";
 		for (size_t i = 0; i < differenceSets.size(); i++)
 		{
 			cout << differenceSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		differenceDiagram();
 	}
 
 
@@ -879,10 +889,15 @@ void displayCharIntersection()
 	}
 	else
 	{
+		cout << "(A " << u8"\u2229" << " B) = { ";
 		for (size_t i = 0; i < intersectionSets.size(); i++)
 		{
 			cout << intersectionSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		intersectionDiagram();
 	}
 
 
@@ -901,10 +916,15 @@ void displayNumIntersection()
 	}
 	else
 	{
+		cout << "(A " << u8"\u2229" << " B) = { ";
 		for (size_t i = 0; i < intersectionSets.size(); i++)
 		{
 			cout << intersectionSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		intersectionDiagram();
 	}
 
 
@@ -923,10 +943,15 @@ void displayStringIntersection()
 	}
 	else
 	{
+		cout << "(A " << u8"\u2229" << " B) = { ";
 		for (size_t i = 0; i < intersectionSets.size(); i++)
 		{
 			cout << intersectionSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		intersectionDiagram();
 	}
 
 
@@ -1088,10 +1113,15 @@ void displayCharUnion()
 	}
 	else
 	{
+		cout << "(A  U B) = { ";
 		for (size_t i = 0; i < unionSets.size(); i++)
 		{
 			cout << unionSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		unionDiagram();
 	}
 
 
@@ -1110,10 +1140,15 @@ void displayNumUnion()
 	}
 	else
 	{
+		cout << "(A  U B) = { ";
 		for (size_t i = 0; i < unionSets.size(); i++)
 		{
 			cout << unionSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		unionDiagram();
 	}
 
 
@@ -1132,10 +1167,15 @@ void displayStringUnion()
 	}
 	else
 	{
+		cout << "(A  U B) = { ";
 		for (size_t i = 0; i < unionSets.size(); i++)
 		{
 			cout << unionSets[i] << " ";
 		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		unionDiagram();
 	}
 
 
