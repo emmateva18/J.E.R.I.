@@ -10,12 +10,12 @@ using namespace std;
 
 void intersectionDiagram()
 {
-	cout << "    OOOOO     OOOOO   " << endl;
-	cout << "  O      OOO        O" << endl;
-	cout << " O      OOOOO        O" << endl;
-	cout << " O      OOOOO        O" << endl;
-	cout << "  O      OOO        O" << endl;
-	cout << "    OOOOO     OOOOO   " << endl;
+	cout << "    OOOOO    OOOOO   " << endl;
+	cout << "  O      OOO       O" << endl;
+	cout << " O      OOOOO       O" << endl;
+	cout << " O      OOOOO       O" << endl;
+	cout << "  O      OOO       O" << endl;
+	cout << "    OOOOO    OOOOO    " << endl;
 }
 
 void unionDiagram()

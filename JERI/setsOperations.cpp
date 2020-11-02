@@ -3,7 +3,6 @@
 #include <iostream>
 #include "struct.h"
 #include <vector>
-#include "JERI.cpp"
 using namespace std;
 
 vector<int> numSet1, numSet2;
@@ -341,8 +340,34 @@ vector<string> differenceOfStringSetsBA()
 
 vector<char> symDifferenceOfCharSets()
 {
+	vector<char> difA = differenceOfCharSets();
+	vector<char> difB = differenceOfCharSetsBA();
 
-	return {1,2,3,4};
+	vector<char> symDif;
+
+	char temp;
+	size_t count = 0;
+	for (size_t i = 0; i < difA.size(); i++)
+	{
+		for (size_t j = 0; j < difB.size() - count; j++)
+		{
+			if (difA[i] == difB[j])
+			{
+				temp = difB[j];
+				difB[j] = difB[difB.size() - 1 - count];
+				difB[numSet2.size() - 1 - count] = temp;
+				count++;
+			}
+		}
+		symDif.push_back(difA[i]);
+	}
+	for (int i = 0; i < difB.size() - count; i++)
+	{
+		symDif.push_back(difB[i]);
+	}
+
+	return symDif;
+
 }
 
 vector<int> symDifferenceOfNumSets()
@@ -379,7 +404,33 @@ vector<int> symDifferenceOfNumSets()
 
 vector<string> symDifferenceOfStringSets()
 {
-	return { "1","2:","3","ss4|" };
+	vector<string> difA = differenceOfStringSets();
+	vector<string> difB = differenceOfStringSetsBA();
+
+	vector<string> symDif;
+
+	string temp;
+	size_t count = 0;
+	for (size_t i = 0; i < difA.size(); i++)
+	{
+		for (size_t j = 0; j < difB.size() - count; j++)
+		{
+			if (difA[i] == difB[j])
+			{
+				temp = difB[j];
+				difB[j] = difB[difB.size() - 1 - count];
+				difB[numSet2.size() - 1 - count] = temp;
+				count++;
+			}
+		}
+		symDif.push_back(difA[i]);
+	}
+	for (int i = 0; i < difB.size() - count; i++)
+	{
+		symDif.push_back(difB[i]);
+	}
+
+	return symDif;
 
 }
 
@@ -443,7 +494,7 @@ void displayCharSymDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		symmetricDifferenceDiagram();
+		//symmetricDifferenceDiagram();
 	}
 
 
@@ -476,7 +527,7 @@ void displayNumSymDifference()
 		cout << "}"<<endl;
 		cout << endl;
 		cout << endl;
-		symmetricDifferenceDiagram();
+		//symmetricDifferenceDiagram();
 	}
 
 
@@ -503,7 +554,7 @@ void displayStringSymDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		symmetricDifferenceDiagram();
+		//symmetricDifferenceDiagram();
 	}
 
 
@@ -673,7 +724,7 @@ void displayCharDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		differenceDiagram();
+		//differenceDiagram();
 	}
 
 
@@ -700,7 +751,7 @@ void displayNumDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		differenceDiagram();
+		//differenceDiagram();
 	}
 
 
@@ -727,7 +778,7 @@ void displayStringDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		differenceDiagram();
+		//differenceDiagram();
 	}
 
 
@@ -897,7 +948,7 @@ void displayCharIntersection()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		intersectionDiagram();
+		//intersectionDiagram();
 	}
 
 
@@ -924,7 +975,7 @@ void displayNumIntersection()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		intersectionDiagram();
+		//intersectionDiagram();
 	}
 
 
@@ -951,7 +1002,7 @@ void displayStringIntersection()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		intersectionDiagram();
+		//intersectionDiagram();
 	}
 
 
@@ -1121,7 +1172,7 @@ void displayCharUnion()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		unionDiagram();
+		//unionDiagram();
 	}
 
 
@@ -1148,7 +1199,7 @@ void displayNumUnion()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		unionDiagram();
+		////unionDiagram();
 	}
 
 
@@ -1167,7 +1218,7 @@ void displayStringUnion()
 	}
 	else
 	{
-		cout << "(A  U B) = { ";
+		cout << "(A U B) = { ";
 		for (size_t i = 0; i < unionSets.size(); i++)
 		{
 			cout << unionSets[i] << " ";
@@ -1175,7 +1226,7 @@ void displayStringUnion()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		unionDiagram();
+		//unionDiagram();
 	}
 
 
