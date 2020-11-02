@@ -1714,7 +1714,7 @@ void enterNums()
 
 	cout << "Enter elements (whole numbers) for set 2:" << endl;
 
-	for (int i = 0; i < elC2; i++)s
+	for (int i = 0; i < elC2; i++)
 	{
 		isValid = false;
 		while (!isValid)
