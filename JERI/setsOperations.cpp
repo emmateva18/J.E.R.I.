@@ -554,7 +554,7 @@ void displayNumSymDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		//symmetricDifferenceDiagram();
+		symmetricDifferenceDiagram();
 	}
 
 
