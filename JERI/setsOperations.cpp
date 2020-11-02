@@ -1686,8 +1686,6 @@ void charUnionMenu()
 void enterNums()
 {
 	system("cls");
-	//
-	/// </summary>
 	int num1;
 	float elC1I, elC2I;
 	int elC1, elC2;
