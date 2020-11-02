@@ -400,7 +400,7 @@ vector<int> symDifferenceOfNumSets()
 	}
 
 	return symDif;
-	
+
 }
 
 vector<string> symDifferenceOfStringSets()
@@ -477,6 +477,8 @@ MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
 
 void displayCharSymDifference()
 {
+	system("cls");
+
 	vector<char> symDifferenceSets = symDifferenceOfCharSets();
 
 	cout << "Symetric Difference" << endl;
@@ -527,6 +529,8 @@ void displayCharSymDifference()
 
 void displayNumSymDifference()
 {
+	system("cls");
+
 	vector<int> symDifferenceSets = symDifferenceOfNumSets();
 
 	cout << "Symetric Difference" << endl;
@@ -554,13 +558,13 @@ void displayNumSymDifference()
 	}
 	else
 	{
-		cout << "(A " << u8"\u0394"<<" B) = { ";
+		cout << "(A " << u8"\u0394" << " B) = { ";
 		for (size_t i = 0; i < symDifferenceSets.size(); i++)
 		{
-			
+
 			cout << symDifferenceSets[i] << " ";
 		}
-		cout << "}"<<endl;
+		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
 		//symmetricDifferenceDiagram();
@@ -572,6 +576,8 @@ void displayNumSymDifference()
 
 void displayStringSymDifference()
 {
+	system("cls");
+
 	vector<string> symDifferenceSets = symDifferenceOfStringSets();
 
 	cout << "Symetric Difference" << endl;
@@ -616,6 +622,8 @@ void displayStringSymDifference()
 
 void stringSymDifferenceMenu()
 {
+	system("cls");
+
 	string yn;
 	bool valid = false;
 	if (stringSet1.size() == 0 && stringSet2.size() == 0)
@@ -658,6 +666,8 @@ void stringSymDifferenceMenu()
 
 void charSymDifferenceMenu()
 {
+	system("cls");
+
 	string yn;
 	bool valid = false;
 	if (charSet1.size() == 0 && charSet2.size() == 0)
@@ -700,6 +710,8 @@ void charSymDifferenceMenu()
 
 void numSymDifferenceMenu()
 {
+	system("cls");
+
 	string yn;
 	bool valid = false;
 	if (numSet1.size() == 0)
@@ -742,6 +754,8 @@ void numSymDifferenceMenu()
 
 void setsSymDifferenceMenu()
 {
+	system("cls");
+
 	cout << "Choose the type of the elements:" << endl;
 	MENU_FUNC_PTR fp = menu({
 			{{ "Numbers" }, numSymDifferenceMenu},
@@ -759,6 +773,8 @@ void setsSymDifferenceMenu()
 
 void displayCharDifference()
 {
+	system("cls");
+
 	vector<char> differenceSets = differenceOfCharSets();
 
 	cout << "Difference" << endl;
@@ -804,6 +820,8 @@ void displayCharDifference()
 
 void displayNumDifference()
 {
+	system("cls");
+
 	vector<int> differenceSets = differenceOfNumSets();
 
 	cout << "Difference" << endl;
@@ -831,7 +849,7 @@ void displayNumDifference()
 	}
 	else
 	{
-		cout << "(A  / B) = { ";
+		cout << "(A / B) = { ";
 		for (size_t i = 0; i < differenceSets.size(); i++)
 		{
 			cout << differenceSets[i] << " ";
@@ -848,6 +866,8 @@ void displayNumDifference()
 
 void displayStringDifference()
 {
+	system("cls");
+
 	vector<string> differenceSets = differenceOfStringSets();
 
 	cout << "Difference" << endl;
@@ -876,7 +896,7 @@ void displayStringDifference()
 	}
 	else
 	{
-		cout << "(A  / B) = { ";
+		cout << "(A / B) = { ";
 		for (size_t i = 0; i < differenceSets.size(); i++)
 		{
 			cout << differenceSets[i] << " ";
@@ -893,6 +913,8 @@ void displayStringDifference()
 
 void stringDifferenceMenu()
 {
+	system("cls");
+
 	string yn;
 	bool valid = false;
 	if (stringSet1.size() == 0 && stringSet2.size() == 0)
@@ -935,6 +957,8 @@ void stringDifferenceMenu()
 
 void charDifferenceMenu()
 {
+	system("cls");
+
 	string yn;
 	bool valid = false;
 	if (charSet1.size() == 0 && charSet2.size() == 0)
@@ -977,6 +1001,8 @@ void charDifferenceMenu()
 
 void numDifferenceMenu()
 {
+	system("cls");
+
 	char yn;
 	bool valid = false;
 	if (numSet1.size() == 0)
@@ -1019,6 +1045,8 @@ void numDifferenceMenu()
 
 void setsDifferenceMenu()
 {
+	system("cls");
+
 	cout << "Choose the type of the elements:" << endl;
 	MENU_FUNC_PTR fp = menu({
 			{{ "Numbers" }, numDifferenceMenu},
@@ -1036,6 +1064,8 @@ void setsDifferenceMenu()
 
 void displayCharIntersection()
 {
+	system("cls");
+
 	vector<char> intersectionSets = intersectionOfCharSets();
 
 	cout << "Intersection" << endl;
@@ -1080,6 +1110,8 @@ void displayCharIntersection()
 
 void displayNumIntersection()
 {
+	system("cls");
+
 	vector<int> intersectionSets = intersectionOfNumSets();
 
 	cout << "Intersection" << endl;
@@ -1124,6 +1156,8 @@ void displayNumIntersection()
 
 void displayStringIntersection()
 {
+	system("cls");
+
 	vector<string> intersectionSets = intersectionOfStringSets();
 
 	cout << "Intersection" << endl;
@@ -1168,6 +1202,8 @@ void displayStringIntersection()
 
 void stringIntersectionMenu()
 {
+	system("cls");
+
 	string yn;
 	bool valid = false;
 	if (stringSet1.size() == 0 && stringSet2.size() == 0)
@@ -1210,6 +1246,8 @@ void stringIntersectionMenu()
 
 void charIntersectionMenu()
 {
+	system("cls");
+
 	string yn;
 	bool valid = false;
 	if (charSet1.size() == 0 && charSet2.size() == 0)
@@ -1252,6 +1290,7 @@ void charIntersectionMenu()
 
 void numIntersectionMenu()
 {
+	system("cls");
 	char yn;
 	bool valid = false;
 	if (numSet1.size() == 0)
@@ -1294,6 +1333,7 @@ void numIntersectionMenu()
 
 void setsIntersectionMenu()
 {
+	system("cls");
 	cout << "Choose the type of the elements:" << endl;
 	MENU_FUNC_PTR fp = menu({
 			{{ "Numbers" }, numIntersectionMenu},
@@ -1312,6 +1352,7 @@ void setsIntersectionMenu()
 void displayCharUnion()
 {
 	vector<char> unionSets = unionOfCharSets();
+	system("cls");
 
 	cout << "Union" << endl;
 
@@ -1356,6 +1397,7 @@ void displayCharUnion()
 void displayNumUnion()
 {
 	vector<int> unionSets = unionOfNumSets();
+	system("cls");
 
 	cout << "Union" << endl;
 
@@ -1370,7 +1412,7 @@ void displayNumUnion()
 	cout << "B = { ";
 	for (size_t i = 0; i < numSet2.size(); i++)
 	{
-		cout << numSet1[i] << " ";
+		cout << numSet2[i] << " ";
 	}
 	cout << "}";
 	cout << endl;
@@ -1401,8 +1443,12 @@ void displayNumUnion()
 void displayStringUnion()
 {
 	vector<string> unionSets = unionOfStringSets();
+	system("cls");
 
 	cout << "Union" << endl;
+
+
+	// Display elements of set A
 
 	cout << "A = { ";
 	for (size_t i = 0; i < stringSet1.size(); i++)
@@ -1411,6 +1457,9 @@ void displayStringUnion()
 	}
 	cout << "}";
 	cout << endl;
+
+
+	// Display elements of set B
 
 	cout << "B = { ";
 	for (size_t i = 0; i < stringSet2.size(); i++)
@@ -1457,6 +1506,8 @@ void enterStrings()
 		cin >> word;
 		stringSet1.push_back(word);
 	}
+
+	system("cls");
 
 	cout << "How many words set 2 will have: ";
 	cin >> elC2;
@@ -1527,6 +1578,8 @@ void enterChars()
 		charSet1.push_back(Char);
 	}
 
+	system("cls");
+
 	cout << "How many characters set 2 will have: ";
 	cin >> elC2;
 
@@ -1583,32 +1636,117 @@ void charUnionMenu()
 
 void enterNums()
 {
-	int elC1, elC2, num;
-	cout << "How many elements set 1 will have: ";
-	cin >> elC1;
+	system("cls");
 
-	cout << "Enter elements for set 1:" << endl;
+	int num1;
+	float elC1I, elC2I;
+	int elC1, elC2;
+	float num;
+	bool isValid = false, isValid2 = false;
+
+	while (!isValid2)
+	{
+		cout << "How many elements set 1 will have: ";
+		cin >> elC1I;
+		elC1= (int)elC1I;
+		if (cin.fail() || elC1 != elC1I)
+		{
+			cinClearIgnore();
+			isValid = false;
+			cout << "Incorrect input! " << endl;
+		}
+		else
+		{
+			isValid2 = true;
+		}
+	}
+
+	cout << "Enter elements (whole numbers) for set 1:" << endl;
+
+
 	for (int i = 0; i < elC1; i++)
 	{
-		cout << "Element " << i + 1 << ": ";
-		cin >> num;
-		numSet1.push_back(num);
+		isValid = false;
+		while (!isValid)
+		{
+			cout << "Element " << i + 1 << ": ";
+			cin >> num;
+			num1 = (int)num;
+			if (cin.fail())
+			{
+				cinClearIgnore();
+				isValid = false;
+				cout << "Incorrect input! " << endl;
+			}
+			else if (num1 != num)
+			{
+				cinClearIgnore();
+				isValid = false;
+				cout << "Incorrect input! " << endl;
+			}
+			else
+			{
+				isValid = true;
+			}
+		}
+		numSet1.push_back(num1);
 	}
 
-	cout << "How many elements set 2 will have: ";
-	cin >> elC2;
+	system("cls");
 
-	cout << "Enter elements for set 2:" << endl;
+	isValid2 = false;
+	while (!isValid2)
+	{
+		cout << "How many elements set 2 will have: ";
+		cin >> elC2I;
+		elC2 = (int)elC2I;
+		if (cin.fail() || elC2 != elC2I)
+		{
+			cinClearIgnore();
+			isValid = false;
+			cout << "Incorrect input! " << endl;
+		}
+		else
+		{
+			isValid2 = true;
+		}
+	}
+
+	cout << "Enter elements (whole numbers) for set 2:" << endl;
+
 	for (int i = 0; i < elC2; i++)
 	{
-		cout << "Element " << i + 1 << ": ";
-		cin >> num;
-		numSet2.push_back(num);
+		isValid = false;
+		while (!isValid)
+		{
+			cout << "Element " << i + 1 << ": ";
+			cin >> num;
+			num1 = (int)num;
+			if (cin.fail())
+			{
+				cinClearIgnore();
+				isValid = false;
+				cout << "Incorrect input! " << endl;
+			}
+			else if (num1 != num)
+			{
+				cinClearIgnore();
+				isValid = false;
+				cout << "Incorrect input! " << endl;
+			}
+			else
+			{
+				isValid = true;
+			}
+		}
+		numSet2.push_back(num1);
 	}
+
 }
 
 void numUnionMenu()
 {
+
 	string yn;
 	bool valid = false;
 	if (numSet1.size() == 0)
@@ -1651,7 +1789,12 @@ void numUnionMenu()
 
 void setsUnionMenu()
 {
+	system("cls");
+
 	cout << "Choose the type of the elements:" << endl;
+
+	// Text for the options in the menu
+
 	MENU_FUNC_PTR fp = menu({
 			{{ "Numbers" }, numUnionMenu},
 			{{ "Characters" }, charUnionMenu},

@@ -2,6 +2,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <windows.h>
 #include "struct.h"
 #include "setsOperations.h"
 #include "Quiz.h"
@@ -12,6 +13,7 @@ using namespace std;
 
 int main()
 {
+
 	system("chcp 65001");
 	system("cls");
 
@@ -20,5 +22,6 @@ int main()
 
 
 	greetings(username, level);
+
 	
 }

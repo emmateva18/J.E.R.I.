@@ -186,6 +186,8 @@ void greetings(string& username, int& level)
 
 void setsOperationsMenu()
 {
+	system("cls");
+
 	MENU_FUNC_PTR fp = menu({
 				{{ "Union of Sets" }, setsUnionMenu},
 				{{ "Intersection of Sets" }, setsIntersectionMenu},
@@ -196,12 +198,84 @@ void setsOperationsMenu()
 	fp();
 }
 
+void resetGame()
+{
+	system("cls");
+
+	string yn;
+	bool valid = false;
+
+	cout << "Are you sure??" << endl;
+	cout << "Everything will be lost" << endl;
+
+	while (!valid)
+	{
+		cout << "Y/N: ";
+		cin >> yn;
+
+		if (yn != "Y" && yn != "N")
+		{
+			cout << "Incorrects input!" << endl;
+		}
+		else
+		{
+			valid = true;
+			if (yn == "Y")
+			{
+
+				string un = "0";
+				int lvl = -1;
+
+				saveUserData(un, lvl);
+				greetings(un, lvl);
+			}
+			else
+			{
+				system("cls");
+			}
+		}
+	}
+
+}
+
+void goToPreviousLevel()
+{
+	system("cls");
+
+	bool isValid = false;
+	int input;
+	string username = getUsername();
+
+	cout << "In which level you want to go:" << endl;
+	cout << "1) What is set?" << endl;
+	cout << "2) Operations with sets?" << endl;
+	cout << "3) Examples (Venn's diagrams)" << endl;
+
+	while (!isValid)
+	{
+		cout << "Your choice: ";
+		cin >> input;
+		if (cin.fail() || (input < 1 || input > 3))
+		{
+			cinClearIgnore();
+			isValid = false;
+			cout << "Number have to be between 1 and " << 3 << endl;
+		}
+		else
+		{
+			isValid = true;
+		}
+	}
+
+	levels(input,username);
+}
+
 void optionsMenu()
 {
+	system("cls");
 	MENU_FUNC_PTR fp = menu({
-				{{ "Reset game" }, NULL},
-				{{ "Go to previous level" }, NULL},
-				{{ "Change Username" }, NULL}
+				{{ "Reset game" }, resetGame},
+				{{ "Go to previous level" },goToPreviousLevel}
 		});
 
 	fp();
