@@ -5,48 +5,9 @@
 #include "struct.h"
 #include "setsOperations.h"
 #include "Quiz.h"
+#include "diagrams.h"
 using namespace std;
 
-
-void intersectionDiagram()
-{
-	cout << "    OOOOO    OOOOO   " << endl;
-	cout << "  O      OOO       O" << endl;
-	cout << " O      OOOOO       O" << endl;
-	cout << " O      OOOOO       O" << endl;
-	cout << "  O      OOO       O" << endl;
-	cout << "    OOOOO    OOOOO    " << endl;
-}
-
-void unionDiagram()
-{
-	cout << "    OOOOO     OOOOO   " << endl;
-	cout << "   OOOOOO OOO OOOOOOO" << endl;
-	cout << "  OOOOOOOOOOOOOOOOOOOO" << endl;
-	cout << "  OOOOOOOOOOOOOOOOOOOO" << endl;
-	cout << "   OOOOOO OOO OOOOOOO" << endl;
-	cout << "    OOOOO     OOOOO   " << endl;
-}
-
-void differenceDiagram()
-{
-	cout << "     OOOOO     OOOOO   " << endl;
-	cout << "   OOOOOOO OO        O" << endl;
-	cout << "  OOOOOOOO   O        O" << endl;
-	cout << "  OOOOOOOO   O        O" << endl;
-	cout << "   OOOOOO OOO        O" << endl;
-	cout << "    OOOOO      OOOOO   " << endl;
-}
-
-void symmetricDifferenceDiagram()
-{
-	cout << "     OOOOO     OOOOO   " << endl;
-	cout << "   OOOOOOOOOOOOOOOOOOO" << endl;
-	cout << "  OOOOOOOO   OOOOOOOOOO" << endl;
-	cout << "  OOOOOOOO   OOOOOOOOOO" << endl;
-	cout << "   OOOOOOOOOOOOOOOOOOO" << endl;
-	cout << "    OOOOO      OOOOO   " << endl;
-}
 
 string getUsername()
 {

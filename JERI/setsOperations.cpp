@@ -2,6 +2,7 @@
 #include "dataValidation.h"
 #include <iostream>
 #include "struct.h"
+#include "diagrams.h"
 #include <vector>
 using namespace std;
 
@@ -480,6 +481,24 @@ void displayCharSymDifference()
 
 	cout << "Symetric Difference" << endl;
 
+	cout << "A = { ";
+	for (size_t i = 0; i < charSet1.size(); i++)
+	{
+		cout << charSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < charSet2.size(); i++)
+	{
+		cout << charSet2[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+	cout << endl;
+
+
 	if (symDifferenceSets.size() == 0)
 	{
 		cout << "No Symetric Difference" << endl;
@@ -494,7 +513,7 @@ void displayCharSymDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		//symmetricDifferenceDiagram();
+		symmetricDifferenceDiagram();
 	}
 
 
@@ -511,6 +530,23 @@ void displayNumSymDifference()
 	vector<int> symDifferenceSets = symDifferenceOfNumSets();
 
 	cout << "Symetric Difference" << endl;
+
+	cout << "A = { ";
+	for (size_t i = 0; i < numSet1.size(); i++)
+	{
+		cout << numSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < numSet2.size(); i++)
+	{
+		cout << numSet2[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+	cout << endl;
 
 	if (symDifferenceSets.size() == 0)
 	{
@@ -539,6 +575,23 @@ void displayStringSymDifference()
 	vector<string> symDifferenceSets = symDifferenceOfStringSets();
 
 	cout << "Symetric Difference" << endl;
+
+	cout << "A = { ";
+	for (size_t i = 0; i < stringSet1.size(); i++)
+	{
+		cout << stringSet1[i] << " ";
+	}
+	cout << " }";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < stringSet2.size(); i++)
+	{
+		cout << stringSet2[i] << " ";
+	}
+	cout << " }";
+	cout << endl;
+	cout << endl;
 
 	if (symDifferenceSets.size() == 0)
 	{
@@ -709,6 +762,24 @@ void displayCharDifference()
 	vector<char> differenceSets = differenceOfCharSets();
 
 	cout << "Difference" << endl;
+	cout << endl;
+
+	cout << "A = { ";
+	for (size_t i = 0; i < charSet1.size(); i++)
+	{
+		cout << charSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < charSet2.size(); i++)
+	{
+		cout << charSet2[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+	cout << endl;
 
 	if (differenceSets.size() == 0)
 	{
@@ -716,7 +787,7 @@ void displayCharDifference()
 	}
 	else
 	{
-		cout << "(A  / B) = { ";
+		cout << "(A / B) = { ";
 		for (size_t i = 0; i < differenceSets.size(); i++)
 		{
 			cout << differenceSets[i] << " ";
@@ -724,7 +795,7 @@ void displayCharDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		//differenceDiagram();
+		differenceDiagram();
 	}
 
 
@@ -737,6 +808,23 @@ void displayNumDifference()
 
 	cout << "Difference" << endl;
 
+	cout << "A = { ";
+	for (size_t i = 0; i < numSet1.size(); i++)
+	{
+		cout << numSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < numSet2.size(); i++)
+	{
+		cout << numSet2[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+	cout << endl;
+
 	if (differenceSets.size() == 0)
 	{
 		cout << "No Difference" << endl;
@@ -751,7 +839,7 @@ void displayNumDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		//differenceDiagram();
+		differenceDiagram();
 	}
 
 
@@ -764,6 +852,24 @@ void displayStringDifference()
 
 	cout << "Difference" << endl;
 
+	cout << "A = { ";
+	for (size_t i = 0; i < stringSet1.size(); i++)
+	{
+		cout << stringSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < stringSet2.size(); i++)
+	{
+		cout << stringSet2[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+	cout << endl;
+
+
 	if (differenceSets.size() == 0)
 	{
 		cout << "No Difference" << endl;
@@ -778,7 +884,7 @@ void displayStringDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		//differenceDiagram();
+		differenceDiagram();
 	}
 
 
@@ -934,6 +1040,23 @@ void displayCharIntersection()
 
 	cout << "Intersection" << endl;
 
+	cout << "A = { ";
+	for (size_t i = 0; i < charSet1.size(); i++)
+	{
+		cout << charSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < charSet2.size(); i++)
+	{
+		cout << charSet2[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+	cout << endl;
+
 	if (intersectionSets.size() == 0)
 	{
 		cout << "No intersection" << endl;
@@ -948,7 +1071,7 @@ void displayCharIntersection()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		//intersectionDiagram();
+		intersectionDiagram();
 	}
 
 
@@ -961,6 +1084,23 @@ void displayNumIntersection()
 
 	cout << "Intersection" << endl;
 
+	cout << "A = { ";
+	for (size_t i = 0; i < numSet1.size(); i++)
+	{
+		cout << numSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < numSet2.size(); i++)
+	{
+		cout << numSet2[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+	cout << endl;
+
 	if (intersectionSets.size() == 0)
 	{
 		cout << "No intersection" << endl;
@@ -975,7 +1115,7 @@ void displayNumIntersection()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		//intersectionDiagram();
+		intersectionDiagram();
 	}
 
 
@@ -987,6 +1127,23 @@ void displayStringIntersection()
 	vector<string> intersectionSets = intersectionOfStringSets();
 
 	cout << "Intersection" << endl;
+
+	cout << "A = { ";
+	for (size_t i = 0; i < stringSet1.size(); i++)
+	{
+		cout << stringSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < stringSet2.size(); i++)
+	{
+		cout << stringSet2[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+	cout << endl;
 
 	if (intersectionSets.size() == 0)
 	{
@@ -1002,7 +1159,7 @@ void displayStringIntersection()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		//intersectionDiagram();
+		intersectionDiagram();
 	}
 
 
@@ -1158,59 +1315,22 @@ void displayCharUnion()
 
 	cout << "Union" << endl;
 
-	if (unionSets.size() == 0)
+	cout << "A = { ";
+	for (size_t i = 0; i < charSet1.size(); i++)
 	{
-		cout << "No Union" << endl;
+		cout << charSet1[i] << " ";
 	}
-	else
-	{
-		cout << "(A  U B) = { ";
-		for (size_t i = 0; i < unionSets.size(); i++)
-		{
-			cout << unionSets[i] << " ";
-		}
-		cout << "}" << endl;
-		cout << endl;
-		cout << endl;
-		//unionDiagram();
-	}
-
-
+	cout << "}";
 	cout << endl;
-}
 
-void displayNumUnion()
-{
-	vector<int> unionSets = unionOfNumSets();
-
-	cout << "Union" << endl;
-
-	if (unionSets.size() == 0)
+	cout << "B = { ";
+	for (size_t i = 0; i < charSet2.size(); i++)
 	{
-		cout << "No Union" << endl;
+		cout << charSet2[i] << " ";
 	}
-	else
-	{
-		cout << "(A  U B) = { ";
-		for (size_t i = 0; i < unionSets.size(); i++)
-		{
-			cout << unionSets[i] << " ";
-		}
-		cout << "}" << endl;
-		cout << endl;
-		cout << endl;
-		////unionDiagram();
-	}
-
-
+	cout << "}";
 	cout << endl;
-}
-
-void displayStringUnion()
-{
-	vector<string> unionSets = unionOfStringSets();
-
-	cout << "Union" << endl;
+	cout << endl;
 
 	if (unionSets.size() == 0)
 	{
@@ -1226,7 +1346,97 @@ void displayStringUnion()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		//unionDiagram();
+		unionDiagram();
+	}
+
+
+	cout << endl;
+}
+
+void displayNumUnion()
+{
+	vector<int> unionSets = unionOfNumSets();
+
+	cout << "Union" << endl;
+
+	cout << "A = { ";
+	for (size_t i = 0; i < numSet1.size(); i++)
+	{
+		cout << numSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < numSet2.size(); i++)
+	{
+		cout << numSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+	cout << endl;
+
+
+	if (unionSets.size() == 0)
+	{
+		cout << "No Union" << endl;
+	}
+	else
+	{
+		cout << "(A U B) = { ";
+		for (size_t i = 0; i < unionSets.size(); i++)
+		{
+			cout << unionSets[i] << " ";
+		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		unionDiagram();
+	}
+
+
+	cout << endl;
+}
+
+void displayStringUnion()
+{
+	vector<string> unionSets = unionOfStringSets();
+
+	cout << "Union" << endl;
+
+	cout << "A = { ";
+	for (size_t i = 0; i < stringSet1.size(); i++)
+	{
+		cout << stringSet1[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+
+	cout << "B = { ";
+	for (size_t i = 0; i < stringSet2.size(); i++)
+	{
+		cout << stringSet2[i] << " ";
+	}
+	cout << "}";
+	cout << endl;
+	cout << endl;
+
+
+	if (unionSets.size() == 0)
+	{
+		cout << "No Union" << endl;
+	}
+	else
+	{
+		cout << "(A U B) = { ";
+		for (size_t i = 0; i < unionSets.size(); i++)
+		{
+			cout << unionSets[i] << " ";
+		}
+		cout << "}" << endl;
+		cout << endl;
+		cout << endl;
+		unionDiagram();
 	}
 
 

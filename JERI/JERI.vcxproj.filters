@@ -27,6 +27,9 @@
     <ClCompile Include="setsOperations.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="diagrams.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="userData.txt">
@@ -44,6 +47,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="setsOperations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diagrams.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
