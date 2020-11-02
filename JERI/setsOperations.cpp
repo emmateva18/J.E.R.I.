@@ -1482,9 +1482,25 @@ void displayStringUnion()
 void enterStrings()
 {
 	int elC1, elC2;
+	float elC1I, elC2I;
+	bool isValid2 = false;
 	string word;
-	cout << "How many words set 1 will have: ";
-	cin >> elC1;
+	while (!isValid2)
+	{
+		cout << "How many elements set 1 will have: ";
+		cin >> elC1I;
+		elC2 = (int)elC1I;
+		if (cin.fail() || elC1 != elC1I)
+		{
+			cinClearIgnore();
+			isValid2 = false;
+			cout << "Incorrect input! " << endl;
+		}
+		else
+		{
+			isValid2 = true;
+		}
+	}
 
 	cout << "Enter words for set 1:" << endl;
 	for (int i = 0; i < elC1; i++)
@@ -1496,9 +1512,22 @@ void enterStrings()
 
 	system("cls");
 
-	cout << "How many words set 2 will have: ";
-	cin >> elC2;
-
+	while (!isValid2)
+	{
+		cout << "How many elements set 1 will have: ";
+		cin >> elC2I;
+		elC2 = (int)elC2I;
+		if (cin.fail() || elC2 != elC2I)
+		{
+			cinClearIgnore();
+			isValid2 = false;
+			cout << "Incorrect input! " << endl;
+		}
+		else
+		{
+			isValid2 = true;
+		}
+	}
 	cout << "Enter words for set 2:" << endl;
 	for (int i = 0; i < elC2; i++)
 	{
