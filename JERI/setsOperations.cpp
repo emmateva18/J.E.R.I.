@@ -1553,9 +1553,26 @@ void stringUnionMenu()
 void enterChars()
 {
 	int elC1, elC2;
+	float elC1I, elC2I;
+	bool isValid2=false;
 	char Char;
-	cout << "How many characters set 1 will have: ";
-	cin >> elC1;
+	while (!isValid2)
+	{
+		cout << "How many elements set 1 will have: ";
+		cin >> elC1I;
+		elC2 = (int)elC1I;
+		if (cin.fail() || elC1 != elC1I)
+		{
+			cinClearIgnore();
+			isValid = false;
+			cout << "Incorrect input! " << endl;
+		}
+		else
+		{
+			isValid2 = true;
+		}
+	}
+
 
 	cout << "Enter characters for set 1:" << endl;
 	for (int i = 0; i < elC1; i++)
@@ -1567,8 +1584,23 @@ void enterChars()
 
 	system("cls");
 	// Clear screen
-	cout << "How many characters set 2 will have: ";
-	cin >> elC2;
+	while (!isValid2)
+	{
+		cout << "How many elements set 2 will have: ";
+		cin >> elC2I;
+		elC2 = (int)elC2I;
+		if (cin.fail() || elC2 != elC2I)
+		{
+			cinClearIgnore();
+			isValid = false;
+			cout << "Incorrect input! " << endl;
+		}
+		else
+		{
+			isValid2 = true;
+		}
+	}
+
 
 	cout << "Enter characters for set 2:" << endl;
 	for (int i = 0; i < elC2; i++)
