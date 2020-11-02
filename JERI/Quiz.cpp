@@ -15,15 +15,15 @@ void Quiz::addQuestions()
 {
 	// Question 1
 	QUESTIONS.push_back(
-		{ 1,									// ID
-		"How many elements an empty set has?",	// Stem
+		{ 1,								// ID
+		"How many elements an empty set has?",				// Stem
 		{"1) 5 or more",						// Distract 1
-		 "2) 0",								// Distract 2
+		 "2) 0",							// Distract 2
 		 "3) only 1",							// Distract 3
-		 "4) -0 :)"								// Distract 4
+		 "4) -0 :)"							// Distract 4
 		},
-		2,										// Correct Answer
-		1										// Level
+		2,								// Correct Answer
+		1								// Level
 		}
 	);
 
@@ -69,7 +69,8 @@ void Quiz::addQuestions()
 		1
 		}
 	);
-
+	
+	// Question 5
 	QUESTIONS.push_back(
 		{ 5,
 		"What represents A U B?",
@@ -83,6 +84,7 @@ void Quiz::addQuestions()
 		}
 	);
 	
+	// Question 6
 	QUESTIONS.push_back(
 		{ 6,
 		"What is intersection ? ",
@@ -96,6 +98,7 @@ void Quiz::addQuestions()
 		}
 	);
 	
+	// Question 7
 	QUESTIONS.push_back(
 		{ 7,
 		"How can you write the difference between sets? ",
@@ -109,6 +112,7 @@ void Quiz::addQuestions()
 		}
 	);	
 	
+	// Question 8
 	QUESTIONS.push_back(
 		{ 8,
 		"What is the other name of symmetric set? ",
@@ -122,9 +126,10 @@ void Quiz::addQuestions()
 		}
 	);
 	
+	// Question 9
 	QUESTIONS.push_back(
 		{ 9,
-		"With what symbol is marked the uniîn? ",
+		"With what symbol is marked the uniÃ®n? ",
 		{"1) U",
 		 "2) /",
 		 "3) +",
@@ -135,6 +140,7 @@ void Quiz::addQuestions()
 		}
 	);
 	
+	// Question 10
 	QUESTIONS.push_back(
 		{ 10,
 		"With what symbol is marked the intersection? ",
@@ -147,7 +153,8 @@ void Quiz::addQuestions()
 		3
 		}
 	);
-
+	
+	// Question 11
 	QUESTIONS.push_back(
 		{ 11,
 		"With what symbol is marked the difference? ",
@@ -161,6 +168,7 @@ void Quiz::addQuestions()
 		}
 	);
 	
+	// Question 12
 	QUESTIONS.push_back(
 		{ 12,
 		"With what symbol is marked the symmetric difference? ",
