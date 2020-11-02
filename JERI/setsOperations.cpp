@@ -600,7 +600,7 @@ void displayStringSymDifference()
 		cout << "}" << endl;
 		cout << endl;
 		cout << endl;
-		//symmetricDifferenceDiagram();
+		symmetricDifferenceDiagram();
 	}
 
 
