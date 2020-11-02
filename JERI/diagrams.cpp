@@ -30,7 +30,7 @@ void differenceDiagram()
 	cout << "  OOOOOOOO   O        O" << endl;
 	cout << "  OOOOOOOO   O        O" << endl;
 	cout << "   OOOOOOOOOOOO      O" << endl;
-	cout << "    OOOOOOO    OOOOOO   " << endl;
+	cout << "     OOOOOO    OOOOOO   " << endl;
 }
 
 void symmetricDifferenceDiagram()
