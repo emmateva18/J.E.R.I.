@@ -77,19 +77,19 @@ void setsDifferenceMenu();
 
 // Intersection
 
-void displayStringDifference();
+void displayStringIntersection();
 
-void displayCharDifference();
+void displayCharIntersection();
 
-void displayNumDifference();
+void displayNumIntersection();
 
-void stringDifferenceMenu();
+void stringIntersectionMenu();
 
-void charDifferenceMenu();
+void charIntersectionMenu();
 
-void numDifferenceMenu();
+void numIntersectionMenu();
 
-void setsDifferenceMenu();
+void setsIntersectionMenu();
 
 
 //Union

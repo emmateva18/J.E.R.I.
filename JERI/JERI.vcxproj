@@ -147,9 +147,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="dataValidation.cpp" />
     <ClCompile Include="diagrams.cpp" />
     <ClCompile Include="JERI.cpp" />
+    <ClCompile Include="levels.cpp" />
     <ClCompile Include="Quiz.cpp" />
     <ClCompile Include="setsOperations.cpp" />
   </ItemGroup>
@@ -157,8 +157,8 @@
     <Text Include="userData.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="dataValidation.h" />
     <ClInclude Include="diagrams.h" />
+    <ClInclude Include="levels.h" />
     <ClInclude Include="Quiz.h" />
     <ClInclude Include="setsOperations.h" />
     <ClInclude Include="struct.h" />

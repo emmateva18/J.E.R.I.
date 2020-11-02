@@ -1,7 +1,7 @@
 ﻿#include "setsOperations.h"
-#include "dataValidation.h"
 #include <iostream>
 #include "struct.h"
+#include "levels.h"
 #include "diagrams.h"
 #include <vector>
 using namespace std;
@@ -1663,47 +1663,3 @@ void setsUnionMenu()
 
 /*----------UNION-PRESENTATION-------*/
 
-void setsOperationsMenu()
-{
-	MENU_FUNC_PTR fp = menu({
-				{{ "Union of Sets" }, setsUnionMenu},
-				{{ "Intersection of Sets" }, setsIntersectionMenu},
-				{{ "Difference of Sets" }, setsDifferenceMenu},
-				{{ "Symmetric Difference" }, setsSymDifferenceMenu}
-		});
-
-	fp();
-}
-
-void optionsMenu()
-{
-	MENU_FUNC_PTR fp = menu({
-				{{ "Reset game" }, NULL},
-				{{ "Go to previous level" }, NULL},
-				{{ "Change Username" }, NULL}
-		});
-
-	fp();
-
-}
-
-void finalLevelMenu()
-{
-	do
-	{
-		MENU_FUNC_PTR fp = menu({
-			{{ "Operations with sets" }, setsOperationsMenu},
-			{{ "Options" }, optionsMenu},
-			{{ "Exit" }, NULL}
-			});
-
-		if (fp == NULL)
-		{
-			exit(0);
-		}
-
-		fp();
-
-	} while (true);
-
-}

@@ -2,7 +2,7 @@
 #include <vector>
 #include <iostream>
 #include "struct.h"
-#include "dataValidation.h"
+#include "levels.h"
 
 using namespace std;
 
