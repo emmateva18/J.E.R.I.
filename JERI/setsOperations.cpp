@@ -1344,6 +1344,7 @@ void displayCharUnion()
 
 	cout << "Union" << endl;
 
+	// Display elements from set A
 	cout << "A = { ";
 	for (size_t i = 0; i < charSet1.size(); i++)
 	{
@@ -1352,6 +1353,7 @@ void displayCharUnion()
 	cout << "}";
 	cout << endl;
 
+	// Display elements from set B
 	cout << "B = { ";
 	for (size_t i = 0; i < charSet2.size(); i++)
 	{
@@ -1389,6 +1391,7 @@ void displayNumUnion()
 
 	cout << "Union" << endl;
 
+	// Display elements from set A
 	cout << "A = { ";
 	for (size_t i = 0; i < numSet1.size(); i++)
 	{
@@ -1397,6 +1400,7 @@ void displayNumUnion()
 	cout << "}";
 	cout << endl;
 
+	// Display elements from set B
 	cout << "B = { ";
 	for (size_t i = 0; i < numSet2.size(); i++)
 	{
@@ -1590,7 +1594,7 @@ void enterChars()
 	{
 		cout << "How many elements set 1 will have: ";
 		cin >> elC1I;
-		elC2 = (int)elC1I;
+		elC2 = (int)elC1I;	// Check if number is float
 		if (cin.fail() || elC1 != elC1I)
 		{
 			cinClearIgnore();
