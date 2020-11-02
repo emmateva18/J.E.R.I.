@@ -25,6 +25,7 @@ string getUsername()
 
 	if (userData.is_open())
 	{
+		// Load data from the file
 		getline(userData, username, '~');
 	}
 
@@ -188,6 +189,7 @@ void setsOperationsMenu()
 {
 	system("cls");
 
+	// MENU_FUNC_PTR is a pointer to a function
 	MENU_FUNC_PTR fp = menu({
 				{{ "Union of Sets" }, setsUnionMenu},
 				{{ "Intersection of Sets" }, setsIntersectionMenu},
