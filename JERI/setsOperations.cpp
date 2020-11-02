@@ -41,20 +41,7 @@ vector<char> unionOfCharSets()
 	return unionS;
 
 
-	//vector<int> unionS;
-
-	//for (size_t i = 0; i < numSet1.size(); i++)
-	//{
-	//	for (size_t k = 0; k < numSet2.size(); k++)
-	//	{
-	//		if (numSet1[i] == numSet1[k])
-	//		{
-	//			unionS.push_back(numSet1[i]);
-	//		}
-	//	}
-	//}
-
-	//return unionS;
+	
 }
 
 vector<int> unionOfNumSets()
