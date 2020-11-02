@@ -1579,7 +1579,7 @@ void enterChars()
 	}
 
 	system("cls");
-
+	// Clear screen
 	cout << "How many characters set 2 will have: ";
 	cin >> elC2;
 
@@ -1637,13 +1637,14 @@ void charUnionMenu()
 void enterNums()
 {
 	system("cls");
-
+	//
+	/// </summary>
 	int num1;
 	float elC1I, elC2I;
 	int elC1, elC2;
 	float num;
 	bool isValid = false, isValid2 = false;
-
+	
 	while (!isValid2)
 	{
 		cout << "How many elements set 1 will have: ";
