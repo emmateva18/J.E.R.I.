@@ -756,6 +756,7 @@ void setsSymDifferenceMenu()
 /*----------SYMETRIC-DIFFERENCE-PRESENTATION-------*/
 
 
+
 /*----------DIFFERENCE-PRESENTATION-------*/
 
 void displayCharDifference()
