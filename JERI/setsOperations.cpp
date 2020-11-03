@@ -461,7 +461,7 @@ MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
 				cinClearIgnore();
 				isValid = false;
 			}
-	
+
 		}
 		else
 		{
