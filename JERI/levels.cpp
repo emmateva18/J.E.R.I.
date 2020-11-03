@@ -84,23 +84,42 @@ void levels(int level, string username)
 {
 	Quiz quiz;
 
+
+	size_t size = username.size();
+	string beuty;
+	beuty.append((30 + size), '-');
+
 	switch (level)
 	{
 	case 1:
-		cout << "You have a great name " << username << "!" << endl;
+
+		cout << beuty << endl;
+		cout << "|   You have a great name " << username << "!  |" << endl;
+		cout << beuty << endl;
+
 		cout << endl;
-		cout << "Let's start with explanioin of the word \"set\"." << endl;
-		cout << "Well, simply put, it's a collection. First we specify a common property among" << endl;
-		cout << "things and then we gather up all the things that have this common property." << endl;
+		cout << "		-------------------------------------------------------------" << endl;
+		cout << "		| Let's start with explanioin of the word \"set\".            |" << endl;
+		cout << "		| Well, simply put, it's a collection. First we             |" << endl;
+		cout << "Set  ->		| specify a common property among things and then we        |" << endl;
+		cout << "		| gather up all the things that have this common property.  |" << endl;
+		cout << "		-------------------------------------------------------------" << endl;
 		cout << endl;
-		cout << "Now that you know what is set, I will tell you more about \"subset\"." << endl;
-		cout << "Mathematically, a set A is referred to as the subset of another set B, if every element of set A is also an element of set B." << endl;
-		cout << "The relationship of one set being a subset of another is called inclusion." << endl;
+
+
+		cout << "		-------------------------------------------------------------" << endl;
+		cout << "		|Now that you know what is set, I will tell you more        |" << endl;
+		cout << "		|about \"subset\".Mathematically, a set A is referred         |" << endl;
+		cout << "Subset->	|to as the subset of another set B, if every element of     |" << endl;
+		cout << "		|set A is also an element of set B. The relationship of     |" << endl;
+		cout << "		|one set being a subset of another is called inclusion.     |" << endl;
+		cout << "		-------------------------------------------------------------" << endl;
 		cout << endl;
-		cout << "We will countinue with the meaning of empty set. In mathematics, the empty set is the unique set having no elements and its size is zero." << endl;
-		cout << "Something interesting is that a Venn diagram is a diagrammatic representation of ALL the possible relationships between different sets of a limited number of elements. " << endl;
+
+		cout << "		We will countinue with the meaning of empty set. In mathematics, the empty set is the unique set having no elements and its size is zero." << endl;
+		cout << "		Something interesting is that a Venn diagram is a diagrammatic representation of ALL the possible relationships between different sets of a limited number of elements. " << endl;
 		cout << endl;
-		cout << "Now we have a little fun quiz for you " << username << endl;
+		cout << "		Now we have a little fun quiz for you " << username << endl;
 		quiz.QuizMenu(1);
 		cout << "You completed level 1" << endl;
 		saveUserData(username, 1);
@@ -171,11 +190,16 @@ void greetings(string& username, int& level)
 {
 	if (!checkUserData(username, level))
 	{
-		cout << "Hello User! How are you doing today?" << endl;
-		cout << "My name is Jeri and today I will tell you more about different types and operation with sets!" << endl;
+		cout << "----------------------------------------------------" << endl;
+		cout << "| Hello User! How are you doing today?             |" << endl;
+		cout << "| My name is Jeri and today I will tell you more   |" << endl;
+		cout << "| about different types and operation with sets!   |" << endl;
+		cout << "----------------------------------------------------" << endl;
+		cout << endl;
 		cout << "But first tell me your name? " << endl;
 		cout << "Name: ";
-		cin >> username;
+		getline(cin, username);
+		system("cls");
 		levels(1, username);
 	}
 	else
@@ -229,6 +253,9 @@ void resetGame()
 				int lvl = -1;
 
 				saveUserData(un, lvl);
+
+				system("cls");
+
 				greetings(un, lvl);
 			}
 			else
@@ -269,7 +296,7 @@ void goToPreviousLevel()
 		}
 	}
 
-	levels(input,username);
+	levels(input, username);
 }
 
 void optionsMenu()

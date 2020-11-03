@@ -41,7 +41,7 @@ vector<char> unionOfCharSets()
 	return unionS;
 
 
-	
+
 }
 
 vector<int> unionOfNumSets()
@@ -431,6 +431,7 @@ vector<string> symDifferenceOfStringSets()
 
 MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
 {
+	float inputC;
 	size_t input = 0;
 	bool isValid = false;
 
@@ -444,12 +445,23 @@ MENU_FUNC_PTR menu(std::vector<MENU_ITEM> menus)
 	while (!isValid)
 	{
 		cout << "Your choice: ";
-		cin >> input;
+		cin >> inputC;
+		input = (size_t)inputC;
 		if (cin.fail() || (input < 1 || input > menus.size()))
 		{
-			cinClearIgnore();
-			isValid = false;
-			cout << "Number have to be between 1 and " << menus.size() << endl;
+			if (input != inputC)
+			{
+				cout << "Incorrect input!" << endl;
+				cinClearIgnore();
+				isValid = false;
+			}
+			else
+			{
+				cout << "Number have to be between 1 and " << menus.size() << endl;
+				cinClearIgnore();
+				isValid = false;
+			}
+	
 		}
 		else
 		{
@@ -1494,7 +1506,7 @@ void enterStrings()
 	{
 		cout << "How many elements set 1 will have: ";
 		cin >> elC1I;
-		elC2 = (int)elC1I;
+		elC1 = (int)elC1I;
 		if (cin.fail() || elC1 != elC1I)
 		{
 			cinClearIgnore();
@@ -1517,9 +1529,10 @@ void enterStrings()
 
 	system("cls");
 
+	isValid2 = false;
 	while (!isValid2)
 	{
-		cout << "How many elements set 1 will have: ";
+		cout << "How many words set 1 will have: ";
 		cin >> elC2I;
 		elC2 = (int)elC2I;
 		if (cin.fail() || elC2 != elC2I)
@@ -1586,19 +1599,21 @@ void stringUnionMenu()
 
 void enterChars()
 {
+	system("cls");
 	int elC1, elC2;
 	float elC1I, elC2I;
-	bool isValid2=false;
+	bool isValid2 = false;
 	char Char;
+
 	while (!isValid2)
 	{
 		cout << "How many elements set 1 will have: ";
 		cin >> elC1I;
-		elC2 = (int)elC1I;	// Check if number is float
+		elC1 = (int)elC1I;	// Check if number is float
 		if (cin.fail() || elC1 != elC1I)
 		{
 			cinClearIgnore();
-			isValid = false;
+			isValid2 = false;
 			cout << "Incorrect input! " << endl;
 		}
 		else
@@ -1618,6 +1633,8 @@ void enterChars()
 
 	system("cls");
 	// Clear screen
+
+	isValid2 = false;
 	while (!isValid2)
 	{
 		cout << "How many elements set 2 will have: ";
@@ -1626,7 +1643,7 @@ void enterChars()
 		if (cin.fail() || elC2 != elC2I)
 		{
 			cinClearIgnore();
-			isValid = false;
+			isValid2 = false;
 			cout << "Incorrect input! " << endl;
 		}
 		else
@@ -1695,12 +1712,12 @@ void enterNums()
 	int elC1, elC2;
 	float num;
 	bool isValid = false, isValid2 = false;
-	
+
 	while (!isValid2)
 	{
 		cout << "How many elements set 1 will have: ";
 		cin >> elC1I;
-		elC1= (int)elC1I;
+		elC1 = (int)elC1I;
 		if (cin.fail() || elC1 != elC1I)
 		{
 			cinClearIgnore();
