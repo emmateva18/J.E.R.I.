@@ -70,7 +70,7 @@ bool userDataValidation(int level)
 
 void saveUserData(string username, int level)
 {
-	fstream data;
+	ofstream  data;
 	data.open("userData.txt");
 
 	if (data.is_open())
