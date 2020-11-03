@@ -15,12 +15,12 @@ void intersectionDiagram()
 
 void unionDiagram()
 {
-	cout << "    OOOOO     OOOOO   " << endl;
+	cout << "    OOOOOO    OOOOOO   " << endl;
 	cout << "   OOOOOOOOOOOOOOOOOO" << endl;
 	cout << "  OOOOOOOOOOOOOOOOOOOO" << endl;
 	cout << "  OOOOOOOOOOOOOOOOOOOO" << endl;
 	cout << "   OOOOOOOOOOOOOOOOOO" << endl;
-	cout << "    OOOOO     OOOOO   " << endl;
+	cout << "    OOOOOO   OOOOOO   " << endl;
 }
 
 void differenceDiagram()

@@ -640,7 +640,7 @@ void stringSymDifferenceMenu()
 
 			if (yn != "Y" && yn != "N")
 			{
-				cout << "Incorrects input!";
+				cerr << "Incorrects input!";
 			}
 			else
 			{
@@ -684,7 +684,7 @@ void charSymDifferenceMenu()
 
 			if (yn != "Y" && yn != "N")
 			{
-				cout << "Incorrect input!";
+				cerr << "Incorrect input!";
 			}
 			else
 			{
@@ -728,7 +728,7 @@ void numSymDifferenceMenu()
 
 			if (yn != "Y" && yn != "N")
 			{
-				cout << "Incorrect input!";
+				cerr << "Incorrect input!";
 			}
 			else
 			{
@@ -932,7 +932,7 @@ void stringDifferenceMenu()
 
 			if (yn != "Y" && yn != "N")
 			{
-				cout << "Incorrects input!";
+				cerr << "Incorrects input!";
 			}
 			else
 			{
@@ -976,7 +976,7 @@ void charDifferenceMenu()
 
 			if (yn != "Y" && yn != "N")
 			{
-				cout << "Incorrect input!";
+				cerr << "Incorrect input!";
 			}
 			else
 			{
@@ -1020,7 +1020,7 @@ void numDifferenceMenu()
 
 			if (yn != 'Y' && yn != 'N')
 			{
-				cout << "Incorrect input!";
+				cerr << "Incorrect input!";
 			}
 			else
 			{
@@ -1221,7 +1221,7 @@ void stringIntersectionMenu()
 
 			if (yn != "Y" && yn != "N")
 			{
-				cout << "Incorrects input!";
+				cerr << "Incorrects input!";
 			}
 			else
 			{
@@ -1265,7 +1265,7 @@ void charIntersectionMenu()
 
 			if (yn != "Y" && yn != "N")
 			{
-				cout << "Incorrect input!";
+				cerr << "Incorrect input!";
 			}
 			else
 			{
@@ -1308,7 +1308,7 @@ void numIntersectionMenu()
 
 			if (yn != 'Y' && yn != 'N')
 			{
-				cout << "Incorrect input!";
+				cerr << "Incorrect input!";
 			}
 			else
 			{
@@ -1425,7 +1425,7 @@ void displayNumUnion()
 
 	if (unionSets.size() == 0)
 	{
-		cout << "No Union" << endl;
+		cerr << "No Union" << endl;
 	}
 	else
 	{
@@ -1477,7 +1477,7 @@ void displayStringUnion()
 
 	if (unionSets.size() == 0)
 	{
-		cout << "No Union" << endl;
+		cerr << "No Union" << endl;
 	}
 	else
 	{
@@ -1511,7 +1511,7 @@ void enterStrings()
 		{
 			cinClearIgnore();
 			isValid2 = false;
-			cout << "Incorrect input! " << endl;
+			cerr << "Incorrect input! " << endl;
 		}
 		else
 		{
@@ -1539,7 +1539,7 @@ void enterStrings()
 		{
 			cinClearIgnore();
 			isValid2 = false;
-			cout << "Incorrect input! " << endl;
+			cerr << "Incorrect input! " << endl;
 		}
 		else
 		{
@@ -1574,7 +1574,7 @@ void stringUnionMenu()
 
 			if (yn != "Y" && yn != "N")
 			{
-				cout << "Incorrects input!";
+				cerr << "Incorrects input!";
 			}
 			else
 			{
@@ -1614,7 +1614,7 @@ void enterChars()
 		{
 			cinClearIgnore();
 			isValid2 = false;
-			cout << "Incorrect input! " << endl;
+			cerr << "Incorrect input! " << endl;
 		}
 		else
 		{
@@ -1644,7 +1644,7 @@ void enterChars()
 		{
 			cinClearIgnore();
 			isValid2 = false;
-			cout << "Incorrect input! " << endl;
+			cerr << "Incorrect input! " << endl;
 		}
 		else
 		{
@@ -1681,7 +1681,7 @@ void charUnionMenu()
 
 			if (yn != "Y" && yn != "N")
 			{
-				cout << "Incorrects input!";
+				cerr << "Incorrects input!";
 			}
 			else
 			{
@@ -1722,7 +1722,7 @@ void enterNums()
 		{
 			cinClearIgnore();
 			isValid = false;
-			cout << "Incorrect input! " << endl;
+			cerr << "Incorrect input! " << endl;
 		}
 		else
 		{
@@ -1745,13 +1745,13 @@ void enterNums()
 			{
 				cinClearIgnore();
 				isValid = false;
-				cout << "Incorrect input! " << endl;
+				cerr << "Incorrect input! " << endl;
 			}
 			else if (num1 != num)
 			{
 				cinClearIgnore();
 				isValid = false;
-				cout << "Incorrect input! " << endl;
+				cerr << "Incorrect input! " << endl;
 			}
 			else
 			{
@@ -1773,7 +1773,7 @@ void enterNums()
 		{
 			cinClearIgnore();
 			isValid = false;
-			cout << "Incorrect input! " << endl;
+			cerr << "Incorrect input! " << endl;
 		}
 		else
 		{
@@ -1795,13 +1795,13 @@ void enterNums()
 			{
 				cinClearIgnore();
 				isValid = false;
-				cout << "Incorrect input! " << endl;
+				cerr << "Incorrect input! " << endl;
 			}
 			else if (num1 != num)
 			{
 				cinClearIgnore();
 				isValid = false;
-				cout << "Incorrect input! " << endl;
+				cerr << "Incorrect input! " << endl;
 			}
 			else
 			{
@@ -1833,7 +1833,7 @@ void numUnionMenu()
 
 			if (yn != "Y" && yn != "N")
 			{
-				cout << "Incorrects input!";
+				cerr << "Incorrects input!";
 			}
 			else
 			{

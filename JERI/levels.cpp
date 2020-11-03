@@ -84,6 +84,7 @@ void saveUserData(string username, int level)
 
 
 // To do
+// It's very important to be fixed
 void levels(int level, string username)
 {
 	Quiz quiz;
@@ -196,7 +197,7 @@ void levels(int level, string username)
 		cout << "		-------------------------------------------------------------" << endl;
 		cout << "Symetric ->	|In mathematics, the symmetric difference of two sets, also |" << endl;
 		cout << "Difference	|known as the disjunctive union, is set of elements which   |" << endl;
-		cout <<		"		|are in either of the sets, but not in their intersection.  |" << endl;
+		cout << "		|are in either of the sets, but not in their intersection.  |" << endl;
 		cout << "		-------------------------------------------------------------" << endl;
 		cout << endl;
 
@@ -236,31 +237,115 @@ void levels(int level, string username)
 
 
 	case 3:
-		cout << "Examples of sets" << endl;
-		cout << "This is an union:" << endl;
+		cout << "-----------------" << endl;
+		cout << "|Venn's diagrams|" << endl;
+		cout << "-----------------" << endl;
+
+		cout << endl;
+		cout << "-------" << endl;
+		cout << "|Union|" << endl;
+		cout << "-------" << endl;
 		cout << endl;
 		unionDiagram();
+
 		cout << endl;
-		cout << "The union is marked with U." << endl;
-		cout << u8"A \u03F5 B = {x : x ϵ A or x ϵ B}" << endl;
+		cout << "-----------------------------------" << endl;
+		cout << "|The union is marked with U       |" << endl;
+		cout << "-----------------------------------" << endl;
+
+		isVaild = false;
+		while (!isVaild)
+		{
+			cout << "Type \"Next\" to continue: ";
+			cin >> next;
+			if (next == "Next")
+			{
+				system("cls");
+				isVaild = true;
+			}
+		}
+
+
 		cout << endl;
-		cout << "This is an intersection:" << endl;
+		cout << "--------------" << endl;
+		cout << "|Intersection|" << endl;
+		cout << "--------------" << endl;
 		cout << endl;
 		intersectionDiagram();
-		cout << "The intersection is marked with " << u8"\u2229" << endl;
+
 		cout << endl;
-		cout << "This is a difference:" << endl;
+		cout << "-------------------------------------------" << endl;
+		cout << "|The intersection is marked with " << u8"\u2229        |" << endl;
+		cout << "-------------------------------------------" << endl;
+
+
+		isVaild = false;
+		while (!isVaild)
+		{
+			cout << "Type \"Next\" to continue: ";
+			cin >> next;
+			if (next == "Next")
+			{
+				system("cls");
+				isVaild = true;
+			}
+		}
+
+		cout << "------------" << endl;
+		cout << "|Difference|" << endl;
+		cout << "------------" << endl;
 		cout << endl;
 		differenceDiagram();
+
 		cout << endl;
-		cout << "The difference is marked with /" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "|The difference is marked with /|" << endl;
+		cout << "---------------------------------" << endl;
+
+		isVaild = false;
+		while (!isVaild)
+		{
+			cout << "Type \"Next\" to continue: ";
+			cin >> next;
+			if (next == "Next")
+			{
+				system("cls");
+				isVaild = true;
+			}
+		}
+
 		cout << endl;
-		cout << "This is symmetric difference:" << endl;
+		cout << "----------------------" << endl;
+		cout << "|Symmetric difference|" << endl;
+		cout << "----------------------" << endl;
+
 		cout << endl;
 		symmetricDifferenceDiagram();
-		cout << "The symemetric difference is marked with " << u8"\u0394" << endl;
-		quiz.QuizMenu(3);
-		cout << "You completed level 3" << endl;
+
+		cout << "--------------------------------------------" << endl;
+		cout << "The symemetric difference is marked with " << u8"\u0394 |" << endl;
+		cout << "--------------------------------------------" << endl;
+
+
+		isVaild = false;
+		while (!isVaild)
+		{
+			cout << "Type \"Next\" to continue: ";
+			cin >> next;
+			if (next == "Next")
+			{
+				system("cls");
+				cout << "You completed level 3" << endl;
+				cout << endl;
+				cout << endl;
+				quiz.QuizMenu(3);
+				isVaild = true;
+			}
+		}
+
+		
+
+
 		saveUserData(username, 3);
 
 	case 4:
@@ -336,7 +421,7 @@ void resetGame()
 
 		if (yn != "Y" && yn != "N")
 		{
-			cout << "Incorrects input!" << endl;
+			cerr << "Incorrects input!" << endl;
 		}
 		else
 		{

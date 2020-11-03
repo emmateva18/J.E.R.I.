@@ -223,7 +223,7 @@ void Quiz::QuizMenu(int level)
 				}
 				else
 				{
-					cout << "Invalid input! Number must be between 1 and 4" << endl;
+					cerr << "Invalid input! Number must be between 1 and 4" << endl;
 					correct = false;
 				}
 			} while (!correct);
