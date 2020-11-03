@@ -41,7 +41,7 @@ int getLevel()
 	string level[2];
 	userData.open("userData.txt");
 
-	// Need to be fixed
+	// To do
 	if (userData.is_open())
 	{
 		getline(userData, level[0], '~');
@@ -81,6 +81,9 @@ void saveUserData(string username, int level)
 	data.close();
 }
 
+
+
+// To do
 void levels(int level, string username)
 {
 	Quiz quiz;
@@ -130,7 +133,7 @@ void levels(int level, string username)
 		cout << "		-------------------------------------------------------------    " << endl;
 
 		cout << endl;
-		
+
 		while (!isVaild)
 		{
 			cout << "Type \"Next\" to continue: ";
@@ -146,6 +149,8 @@ void levels(int level, string username)
 			}
 		}
 
+		saveUserData(username, 1);
+
 		isVaild = false;
 		while (!isVaild)
 		{
@@ -159,12 +164,13 @@ void levels(int level, string username)
 		}
 
 
-		
-
-		saveUserData(username, 1);
-
 	case 2:
-		cout << "Now I will show you some operations with sets!" << endl;
+		cout << "-----------------------------------------------------" << endl;
+		cout << "|                                                    |" << endl;
+		cout << "| Now I will show you some operations with sets!     |" << endl;
+		cout << "|                                                    |" << endl;
+		cout << "-----------------------------------------------------" << endl;
+
 		cout << endl;
 		cout << "Let A = {2, 4, 6, 8} and B = {6, 8, 10, 12}. Then, A U B is represented as the set containing all the elements that belong to both the sets individually." << endl;
 		cout << endl;
@@ -237,6 +243,7 @@ void greetings(string& username, int& level)
 		cout << endl;
 		cout << "But first tell me your name? " << endl;
 		cout << "Name: ";
+		cin.ignore();
 		getline(cin, username);
 		system("cls");
 		levels(1, username);
@@ -288,7 +295,7 @@ void resetGame()
 			if (yn == "Y")
 			{
 
-				string un = "0";
+				string un = "-1";
 				int lvl = -1;
 
 				saveUserData(un, lvl);

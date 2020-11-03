@@ -196,7 +196,7 @@ void Quiz::QuizMenu(int level)
 
 	for (size_t i = loopStart; i < QUESTIONS.size(); i++)
 	{
-		if (i != 0 && i != 4 && i != 6)
+		if (i != 0 && i != 4 && i != 8)
 		{
 			system("cls");
 		}
@@ -241,7 +241,7 @@ void Quiz::QuizMenu(int level)
 		loopStart = 4;
 		break;
 	case 4:
-		loopStart = 6;
+		loopStart = 8;
 		break;
 	}
 
@@ -265,13 +265,15 @@ bool Quiz::checkAnswer(int id, int userAnswer)
 
 void Quiz::showResults(int correctAnswersCount, int answersCount)
 {
+	static int level = 0;
+
 	float percentage = ((float)correctAnswersCount / (float)answersCount) * 100;
 	cout << endl;
-	cout << "-----------------------------------------------|" << endl;;
-	cout << "| Result " << correctAnswersCount << " / " << answersCount <<"                                 |" <<endl;
-	cout << "| "<<percentage << "%                                          |" << endl;
-	cout << "| You completed level 1                        |" << endl;
-	cout << "-----------------------------------------------|" << endl;;
+	cout << "------------------------------------------------|" << endl;;
+	cout << "| Result " << correctAnswersCount << " / " << answersCount <<"                                  |" <<endl;
+	cout << "| "<<percentage << "%                                           |" << endl;
+	cout << "| You completed level "<<++level<<"                         |" << endl;
+	cout << "------------------------------------------------|" << endl;;
 	cout << endl;
 }
 
