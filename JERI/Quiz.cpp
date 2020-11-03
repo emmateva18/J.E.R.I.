@@ -69,7 +69,7 @@ void Quiz::addQuestions()
 		1
 		}
 	);
-	
+
 	// Question 5
 	QUESTIONS.push_back(
 		{ 5,
@@ -83,7 +83,7 @@ void Quiz::addQuestions()
 		2
 		}
 	);
-	
+
 	// Question 6
 	QUESTIONS.push_back(
 		{ 6,
@@ -97,7 +97,7 @@ void Quiz::addQuestions()
 		2
 		}
 	);
-	
+
 	// Question 7
 	QUESTIONS.push_back(
 		{ 7,
@@ -110,8 +110,8 @@ void Quiz::addQuestions()
 		3,
 		2
 		}
-	);	
-	
+	);
+
 	// Question 8
 	QUESTIONS.push_back(
 		{ 8,
@@ -125,7 +125,7 @@ void Quiz::addQuestions()
 		2
 		}
 	);
-	
+
 	// Question 9
 	QUESTIONS.push_back(
 		{ 9,
@@ -133,13 +133,13 @@ void Quiz::addQuestions()
 		{"1) U",
 		 "2) /",
 		 "3) +",
-		 "4) " u8"\u0394", 
+		 "4) " u8"\u0394",
 		},
 		1,
 		3
 		}
 	);
-	
+
 	// Question 10
 	QUESTIONS.push_back(
 		{ 10,
@@ -147,13 +147,13 @@ void Quiz::addQuestions()
 		{"1) P",
 		 "2) " u8"\u2229",
 		 "3) +",
-		 "4) *", 
+		 "4) *",
 		},
 		2,
 		3
 		}
 	);
-	
+
 	// Question 11
 	QUESTIONS.push_back(
 		{ 11,
@@ -167,7 +167,7 @@ void Quiz::addQuestions()
 		3
 		}
 	);
-	
+
 	// Question 12
 	QUESTIONS.push_back(
 		{ 12,
@@ -192,8 +192,14 @@ void Quiz::QuizMenu(int level)
 	const int answerCount = 4;
 	bool correct;
 
-	for (size_t i = 0; i < QUESTIONS.size(); i++)
+	static int loopStart = 0;
+
+	for (size_t i = loopStart; i < QUESTIONS.size(); i++)
 	{
+		if (i != 0 && i != 4 && i != 6)
+		{
+			system("cls");
+		}
 		if (QUESTIONS[i].level == level)
 		{
 			cout << QUESTIONS[i].stem << endl;
@@ -229,6 +235,16 @@ void Quiz::QuizMenu(int level)
 		}
 	}
 
+	switch (loopStart)
+	{
+	case 0:
+		loopStart = 4;
+		break;
+	case 4:
+		loopStart = 6;
+		break;
+	}
+
 	showResults(correctAnswersCount, answerCount);
 
 }
@@ -251,8 +267,11 @@ void Quiz::showResults(int correctAnswersCount, int answersCount)
 {
 	float percentage = ((float)correctAnswersCount / (float)answersCount) * 100;
 	cout << endl;
-	cout << "Result " << correctAnswersCount << " / " << answersCount << endl;
-	cout << percentage << "%" << endl;
+	cout << "-----------------------------------------------|" << endl;;
+	cout << "| Result " << correctAnswersCount << " / " << answersCount <<"                                 |" <<endl;
+	cout << "| "<<percentage << "%                                          |" << endl;
+	cout << "| You completed level 1                        |" << endl;
+	cout << "-----------------------------------------------|" << endl;;
 	cout << endl;
 }
 

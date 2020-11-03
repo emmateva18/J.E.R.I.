@@ -3,6 +3,7 @@
 #include "diagrams.h"
 #include "Quiz.h"
 #include <iostream>
+#include <windows.h>
 #include <vector>
 #include <string>
 #include <fstream>
@@ -88,6 +89,8 @@ void levels(int level, string username)
 	size_t size = username.size();
 	string beuty;
 	beuty.append((30 + size), '-');
+	string next;
+	bool isVaild = false;
 
 	switch (level)
 	{
@@ -116,12 +119,48 @@ void levels(int level, string username)
 		cout << "		-------------------------------------------------------------" << endl;
 		cout << endl;
 
-		cout << "		We will countinue with the meaning of empty set. In mathematics, the empty set is the unique set having no elements and its size is zero." << endl;
-		cout << "		Something interesting is that a Venn diagram is a diagrammatic representation of ALL the possible relationships between different sets of a limited number of elements. " << endl;
+
+		cout << "		-------------------------------------------------------------    " << endl;
+		cout << "		|We will countinue with the meaning of empty set.           |    " << endl;
+		cout << "		|In mathematics, the empty set is the unique set            |    " << endl;
+		cout << "		|having no elements and its size is zero. Something         |     " << endl;
+		cout << "Empty Set ->	|interesting is that a Venn diagram is a diagrammatic       |  " << endl;
+		cout << "		|representation of ALL the possible relationships           |    " << endl;
+		cout << "		|between different sets of a limited number of elements.    |  " << endl;
+		cout << "		-------------------------------------------------------------    " << endl;
+
 		cout << endl;
-		cout << "		Now we have a little fun quiz for you " << username << endl;
-		quiz.QuizMenu(1);
-		cout << "You completed level 1" << endl;
+		
+		while (!isVaild)
+		{
+			cout << "Type \"Next\" to continue: ";
+			cin >> next;
+			if (next == "Next")
+			{
+				system("cls");
+				cout << "Now it's time for a short funny quiz!" << endl;
+				cout << endl;
+				cout << endl;
+				quiz.QuizMenu(1);
+				isVaild = true;
+			}
+		}
+
+		isVaild = false;
+		while (!isVaild)
+		{
+			cout << "Type \"Next\" to continue: ";
+			cin >> next;
+			if (next == "Next")
+			{
+				system("cls");
+				isVaild = true;
+			}
+		}
+
+
+		
+
 		saveUserData(username, 1);
 
 	case 2:
