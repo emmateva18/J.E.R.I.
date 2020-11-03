@@ -503,6 +503,7 @@ void finalLevelMenu()
 
 		if (fp == NULL)
 		{
+			cout << "Goodbye! :)";
 			exit(0);
 		}
 
