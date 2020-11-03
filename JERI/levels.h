@@ -13,4 +13,4 @@ void saveUserData(std::string username, int level);
 
 void levels(int level, std::string username);
 
-void greetings(std::string& username, int& level);
+void greetings(std::string& username, int& level, bool = 0);

@@ -165,28 +165,75 @@ void levels(int level, string username)
 
 
 	case 2:
-		cout << "-----------------------------------------------------" << endl;
-		cout << "|                                                    |" << endl;
+		cout << "------------------------------------------------------" << endl;
 		cout << "| Now I will show you some operations with sets!     |" << endl;
-		cout << "|                                                    |" << endl;
-		cout << "-----------------------------------------------------" << endl;
+		cout << "------------------------------------------------------" << endl;
 
 		cout << endl;
-		cout << "Let A = {2, 4, 6, 8} and B = {6, 8, 10, 12}. Then, A U B is represented as the set containing all the elements that belong to both the sets individually." << endl;
+		cout << "		-------------------------------------------------------------" << endl;
+		cout << "		|Let A = {2, 4, 6, 8} and B = {6, 8, 10, 12}. Then, A U B   |" << endl;
+		cout << "Union ->	|is represented as the set containing all the elements      |" << endl;
+		cout << "		|that belong to both the sets individually.                 |" << endl;
+		cout << "		-------------------------------------------------------------" << endl;
+
 		cout << endl;
-		cout << "An intersection is the collection of all the elements that are common to all the sets under consideration." << endl;
-		cout << u8"Let A = {2, 4, 6, 8} and B = {6, 8, 10, 12} then A \u2229 B." << endl;
-		cout << endl;
-		cout << u8"Let, A = {1, 2, 3, 4, 5, 6} and B = {2, 4, 6, 8} then A – B = {1, 3, 5} and B – A = {8}. The sets (A – B), (B – A) and (A \u2229 B) are mutually disjoint sets." << endl;
-		cout << endl;
-		cout << "In mathematics, the symmetric difference of two sets, also known as the disjunctive union, is the set of elements which are in either of the sets, but not in their intersection. " << endl;
-		cout << endl;
-		cout << "Let's see what you've learned today!" << endl;
+		cout << "		-------------------------------------------------------------" << endl;
+		cout << "		|An intersection is the collection of all the elements that | " << endl;
+		cout << "Intersection -> |are common to all the sets under consideration.	    | " << endl;
+		cout << u8"		|Let A = {2, 4, 6, 8} and B = {6, 8, 10, 12} then A \u2229 B.    |" << endl;
+		cout << "		-------------------------------------------------------------" << endl;
 
 
-		quiz.QuizMenu(2);
-		cout << "You completed level 2" << endl;
+
+		cout << endl;
+		cout << "		-------------------------------------------------------------" << endl;
+		cout << u8"		|Let, A = {1, 2, 3, 4, 5, 6} and B = {2, 4, 6, 8} then      |" << endl;
+		cout << "Difference ->	|A / B = {1, 3, 5} and B / A = {8}. The sets                |" << endl;
+		cout << "		|(A / B), (B / A) and (A \u2229 B) are mutually disjoint sets.   |" << endl;
+		cout << "		-------------------------------------------------------------" << endl;
+
+		cout << endl;
+		cout << "		-------------------------------------------------------------" << endl;
+		cout << "Symetric ->	|In mathematics, the symmetric difference of two sets, also |" << endl;
+		cout << "Difference	|known as the disjunctive union, is set of elements which   |" << endl;
+		cout <<		"		|are in either of the sets, but not in their intersection.  |" << endl;
+		cout << "		-------------------------------------------------------------" << endl;
+		cout << endl;
+
+
+
+
+		isVaild = false;
+		while (!isVaild)
+		{
+			cout << "Type \"Next\" to continue: ";
+			cin >> next;
+			if (next == "Next")
+			{
+				system("cls");
+
+				cout << "Let's see what you've learned today!" << endl;
+				cout << endl;
+				cout << endl;
+				quiz.QuizMenu(2);
+				isVaild = true;
+			}
+		}
+
 		saveUserData(username, 2);
+
+		isVaild = false;
+		while (!isVaild)
+		{
+			cout << "Type \"Next\" to continue: ";
+			cin >> next;
+			if (next == "Next")
+			{
+				system("cls");
+				isVaild = true;
+			}
+		}
+
 
 	case 3:
 		cout << "Examples of sets" << endl;
@@ -231,8 +278,9 @@ void levels(int level, string username)
 
 }
 
-void greetings(string& username, int& level)
+void greetings(string& username, int& level, bool reset)
 {
+
 	if (!checkUserData(username, level))
 	{
 		cout << "----------------------------------------------------" << endl;
@@ -243,7 +291,8 @@ void greetings(string& username, int& level)
 		cout << endl;
 		cout << "But first tell me your name? " << endl;
 		cout << "Name: ";
-		cin.ignore();
+		if (reset)
+			cin.ignore();
 		getline(cin, username);
 		system("cls");
 		levels(1, username);
@@ -302,7 +351,7 @@ void resetGame()
 
 				system("cls");
 
-				greetings(un, lvl);
+				greetings(un, lvl, 1);
 			}
 			else
 			{

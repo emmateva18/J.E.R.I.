@@ -268,7 +268,6 @@ void Quiz::showResults(int correctAnswersCount, int answersCount)
 	static int level = 0;
 
 	float percentage = ((float)correctAnswersCount / (float)answersCount) * 100;
-	cout << endl;
 	cout << "------------------------------------------------|" << endl;;
 	cout << "| Result " << correctAnswersCount << " / " << answersCount <<"                                  |" <<endl;
 	cout << "| "<<percentage << "%                                           |" << endl;
